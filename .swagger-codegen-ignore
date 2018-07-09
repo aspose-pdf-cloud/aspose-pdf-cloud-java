@@ -25,5 +25,5 @@ docs/*.*
 src/main/java/com/aspose/asposecloudpdf/auth/*.*
 .gitignore
 git_push.sh
-README.md
-
+#README.md
+pom.xml
