@@ -33,7 +33,7 @@ Add this dependency to your project's POM:
 ```xml
 <dependency>
     <groupId>com.aspose</groupId>
-    <artifactId>aspose-cloud-pdf-android</artifactId>
+    <artifactId>aspose-cloud-pdf</artifactId>
     <version>18.6.0</version>
     <scope>compile</scope>
 </dependency>
@@ -44,7 +44,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.aspose:aspose-cloud-pdf-android:18.6.0"
+compile "com.aspose:aspose-cloud-pdf:18.6.0"
 ```
 
 ### Others
@@ -55,7 +55,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/aspose-cloud-pdf-android-18.6.0.jar
+* target/aspose-cloud-pdf-18.6.0.jar
 * target/lib/*.jar
 
 ## Getting Started
@@ -64,9 +64,9 @@ Please follow the [installation](#installation) instruction and execute the foll
 
 ```java
 
-import com.aspose.asposecloudpdfandroid.*;
-import com.aspose.asposecloudpdfandroid.model.*;
-import com.aspose.asposecloudpdfandroid.api.PdfApi;
+import com.aspose.asposecloudpdf.*;
+import com.aspose.asposecloudpdf.model.*;
+import com.aspose.asposecloudpdf.api.PdfApi;
 
 import java.io.File;
 import java.util.*;
