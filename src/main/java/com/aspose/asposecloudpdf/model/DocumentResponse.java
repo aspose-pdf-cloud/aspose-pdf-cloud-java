@@ -23,9 +23,8 @@
 package com.aspose.asposecloudpdf.model;
 
 import java.util.Objects;
+import com.aspose.asposecloudpdf.model.AsposeResponse;
 import com.aspose.asposecloudpdf.model.Document;
-import com.aspose.asposecloudpdf.model.HttpStatusCode;
-import com.aspose.asposecloudpdf.model.SaaSposeResponse;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -41,7 +40,7 @@ import java.util.List;
  * DocumentResponse
  */
 
-public class DocumentResponse extends SaaSposeResponse {
+public class DocumentResponse extends AsposeResponse {
   @SerializedName("Document")
   private Document document = null;
 

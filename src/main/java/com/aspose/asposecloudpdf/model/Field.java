@@ -26,7 +26,7 @@ import java.util.Objects;
 import com.aspose.asposecloudpdf.model.FieldType;
 import com.aspose.asposecloudpdf.model.Link;
 import com.aspose.asposecloudpdf.model.LinkElement;
-import com.aspose.asposecloudpdf.model.Rectangle;
+import com.aspose.asposecloudpdf.model.RectanglePdf;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -57,7 +57,7 @@ public class Field extends LinkElement {
   private List<Integer> selectedItems = null;
 
   @SerializedName("Rect")
-  private Rectangle rect = null;
+  private RectanglePdf rect = null;
 
   public Field name(String name) {
     this.name = name;
@@ -147,7 +147,7 @@ public class Field extends LinkElement {
     this.selectedItems = selectedItems;
   }
 
-  public Field rect(Rectangle rect) {
+  public Field rect(RectanglePdf rect) {
     this.rect = rect;
     return this;
   }
@@ -157,11 +157,11 @@ public class Field extends LinkElement {
    * @return rect
   **/
   @ApiModelProperty(value = "Field rectangle.")
-  public Rectangle getRect() {
+  public RectanglePdf getRect() {
     return rect;
   }
 
-  public void setRect(Rectangle rect) {
+  public void setRect(RectanglePdf rect) {
     this.rect = rect;
   }
 

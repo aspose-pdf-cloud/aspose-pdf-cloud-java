@@ -23,9 +23,6 @@
 package com.aspose.asposecloudpdf.model;
 
 import java.util.Objects;
-import com.aspose.asposecloudpdf.model.HttpStatusCode;
-import com.aspose.asposecloudpdf.model.SaaSposeResponse;
-import com.aspose.asposecloudpdf.model.TextFormat;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -36,29 +33,93 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * TextFormatResponse
+ * Represents rectangle DTO.
  */
+@ApiModel(description = "Represents rectangle DTO.")
 
-public class TextFormatResponse extends SaaSposeResponse {
-  @SerializedName("TextFormat")
-  private TextFormat textFormat = null;
+public class RectanglePdf {
+  @SerializedName("LLX")
+  private Double LLX = null;
 
-  public TextFormatResponse textFormat(TextFormat textFormat) {
-    this.textFormat = textFormat;
+  @SerializedName("LLY")
+  private Double LLY = null;
+
+  @SerializedName("URX")
+  private Double URX = null;
+
+  @SerializedName("URY")
+  private Double URY = null;
+
+  public RectanglePdf LLX(Double LLX) {
+    this.LLX = LLX;
     return this;
   }
 
    /**
-   * Get textFormat
-   * @return textFormat
+   * Get LLX
+   * @return LLX
   **/
-  @ApiModelProperty(value = "")
-  public TextFormat getTextFormat() {
-    return textFormat;
+  @ApiModelProperty(required = true, value = "")
+  public Double getLLX() {
+    return LLX;
   }
 
-  public void setTextFormat(TextFormat textFormat) {
-    this.textFormat = textFormat;
+  public void setLLX(Double LLX) {
+    this.LLX = LLX;
+  }
+
+  public RectanglePdf LLY(Double LLY) {
+    this.LLY = LLY;
+    return this;
+  }
+
+   /**
+   * Get LLY
+   * @return LLY
+  **/
+  @ApiModelProperty(required = true, value = "")
+  public Double getLLY() {
+    return LLY;
+  }
+
+  public void setLLY(Double LLY) {
+    this.LLY = LLY;
+  }
+
+  public RectanglePdf URX(Double URX) {
+    this.URX = URX;
+    return this;
+  }
+
+   /**
+   * Get URX
+   * @return URX
+  **/
+  @ApiModelProperty(required = true, value = "")
+  public Double getURX() {
+    return URX;
+  }
+
+  public void setURX(Double URX) {
+    this.URX = URX;
+  }
+
+  public RectanglePdf URY(Double URY) {
+    this.URY = URY;
+    return this;
+  }
+
+   /**
+   * Get URY
+   * @return URY
+  **/
+  @ApiModelProperty(required = true, value = "")
+  public Double getURY() {
+    return URY;
+  }
+
+  public void setURY(Double URY) {
+    this.URY = URY;
   }
 
 
@@ -70,23 +131,28 @@ public class TextFormatResponse extends SaaSposeResponse {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    TextFormatResponse textFormatResponse = (TextFormatResponse) o;
-    return Objects.equals(this.textFormat, textFormatResponse.textFormat) &&
-        super.equals(o);
+    RectanglePdf rectanglePdf = (RectanglePdf) o;
+    return Objects.equals(this.LLX, rectanglePdf.LLX) &&
+        Objects.equals(this.LLY, rectanglePdf.LLY) &&
+        Objects.equals(this.URX, rectanglePdf.URX) &&
+        Objects.equals(this.URY, rectanglePdf.URY);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(textFormat, super.hashCode());
+    return Objects.hash(LLX, LLY, URX, URY);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class TextFormatResponse {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    textFormat: ").append(toIndentedString(textFormat)).append("\n");
+    sb.append("class RectanglePdf {\n");
+    
+    sb.append("    LLX: ").append(toIndentedString(LLX)).append("\n");
+    sb.append("    LLY: ").append(toIndentedString(LLY)).append("\n");
+    sb.append("    URX: ").append(toIndentedString(URX)).append("\n");
+    sb.append("    URY: ").append(toIndentedString(URY)).append("\n");
     sb.append("}");
     return sb.toString();
   }

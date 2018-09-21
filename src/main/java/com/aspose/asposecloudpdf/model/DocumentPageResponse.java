@@ -23,9 +23,8 @@
 package com.aspose.asposecloudpdf.model;
 
 import java.util.Objects;
-import com.aspose.asposecloudpdf.model.Document;
-import com.aspose.asposecloudpdf.model.HttpStatusCode;
-import com.aspose.asposecloudpdf.model.TextReplaceResponse;
+import com.aspose.asposecloudpdf.model.AsposeResponse;
+import com.aspose.asposecloudpdf.model.Page;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -36,29 +35,29 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * DocumentTextReplaceResponse
+ * DocumentPageResponse
  */
 
-public class DocumentTextReplaceResponse extends TextReplaceResponse {
-  @SerializedName("Document")
-  private Document document = null;
+public class DocumentPageResponse extends AsposeResponse {
+  @SerializedName("Page")
+  private Page page = null;
 
-  public DocumentTextReplaceResponse document(Document document) {
-    this.document = document;
+  public DocumentPageResponse page(Page page) {
+    this.page = page;
     return this;
   }
 
    /**
-   * Get document
-   * @return document
+   * Get page
+   * @return page
   **/
   @ApiModelProperty(value = "")
-  public Document getDocument() {
-    return document;
+  public Page getPage() {
+    return page;
   }
 
-  public void setDocument(Document document) {
-    this.document = document;
+  public void setPage(Page page) {
+    this.page = page;
   }
 
 
@@ -70,23 +69,23 @@ public class DocumentTextReplaceResponse extends TextReplaceResponse {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    DocumentTextReplaceResponse documentTextReplaceResponse = (DocumentTextReplaceResponse) o;
-    return Objects.equals(this.document, documentTextReplaceResponse.document) &&
+    DocumentPageResponse documentPageResponse = (DocumentPageResponse) o;
+    return Objects.equals(this.page, documentPageResponse.page) &&
         super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(document, super.hashCode());
+    return Objects.hash(page, super.hashCode());
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class DocumentTextReplaceResponse {\n");
+    sb.append("class DocumentPageResponse {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    document: ").append(toIndentedString(document)).append("\n");
+    sb.append("    page: ").append(toIndentedString(page)).append("\n");
     sb.append("}");
     return sb.toString();
   }
