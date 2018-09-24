@@ -31,39 +31,54 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
- * Create document from images request.
+ * Base class for all responses.
  */
-@ApiModel(description = "Create document from images request.")
+@ApiModel(description = "Base class for all responses.")
 
-public class ImagesListRequest {
-  @SerializedName("ImagesList")
-  private List<String> imagesList = new ArrayList<String>();
 
-  public ImagesListRequest imagesList(List<String> imagesList) {
-    this.imagesList = imagesList;
-    return this;
-  }
+public class AsposeResponse {
+  @SerializedName("Code")
+  private Integer code = null;
 
-  public ImagesListRequest addImagesListItem(String imagesListItem) {
-    this.imagesList.add(imagesListItem);
+  @SerializedName("Status")
+  private String status = null;
+
+  public AsposeResponse code(Integer code) {
+    this.code = code;
     return this;
   }
 
    /**
-   * A list of paths for images.
-   * @return imagesList
+   * Response status code.
+   * @return code
   **/
-  @ApiModelProperty(required = true, value = "A list of paths for images.")
-  public List<String> getImagesList() {
-    return imagesList;
+  @ApiModelProperty(required = true, value = "Response status code.")
+  public Integer getCode() {
+    return code;
   }
 
-  public void setImagesList(List<String> imagesList) {
-    this.imagesList = imagesList;
+  public void setCode(Integer code) {
+    this.code = code;
+  }
+
+  public AsposeResponse status(String status) {
+    this.status = status;
+    return this;
+  }
+
+   /**
+   * Response status.
+   * @return status
+  **/
+  @ApiModelProperty(value = "Response status.")
+  public String getStatus() {
+    return status;
+  }
+
+  public void setStatus(String status) {
+    this.status = status;
   }
 
 
@@ -75,22 +90,24 @@ public class ImagesListRequest {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ImagesListRequest imagesListRequest = (ImagesListRequest) o;
-    return Objects.equals(this.imagesList, imagesListRequest.imagesList);
+    AsposeResponse asposeResponse = (AsposeResponse) o;
+    return Objects.equals(this.code, asposeResponse.code) &&
+        Objects.equals(this.status, asposeResponse.status);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(imagesList);
+    return Objects.hash(code, status);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ImagesListRequest {\n");
+    sb.append("class AsposeResponse {\n");
     
-    sb.append("    imagesList: ").append(toIndentedString(imagesList)).append("\n");
+    sb.append("    code: ").append(toIndentedString(code)).append("\n");
+    sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("}");
     return sb.toString();
   }

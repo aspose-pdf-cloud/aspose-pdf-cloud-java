@@ -23,7 +23,7 @@
 package com.aspose.asposecloudpdf.model;
 
 import java.util.Objects;
-import com.aspose.asposecloudpdf.model.Rectangle;
+import com.aspose.asposecloudpdf.model.RectanglePdf;
 import com.aspose.asposecloudpdf.model.SignatureType;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -64,7 +64,7 @@ public class Signature {
   private Boolean visible = null;
 
   @SerializedName("Rectangle")
-  private Rectangle rectangle = null;
+  private RectanglePdf rectangle = null;
 
   @SerializedName("FormFieldName")
   private String formFieldName = null;
@@ -87,7 +87,7 @@ public class Signature {
    * Gets or sets the signature path.
    * @return signaturePath
   **/
-  @ApiModelProperty(value = "Gets or sets the signature path.")
+  @ApiModelProperty(required = true, value = "Gets or sets the signature path.")
   public String getSignaturePath() {
     return signaturePath;
   }
@@ -222,7 +222,7 @@ public class Signature {
     this.visible = visible;
   }
 
-  public Signature rectangle(Rectangle rectangle) {
+  public Signature rectangle(RectanglePdf rectangle) {
     this.rectangle = rectangle;
     return this;
   }
@@ -232,11 +232,11 @@ public class Signature {
    * @return rectangle
   **/
   @ApiModelProperty(value = "Gets or sets the visible rectangle of the signature. Supports only when signing particular page.")
-  public Rectangle getRectangle() {
+  public RectanglePdf getRectangle() {
     return rectangle;
   }
 
-  public void setRectangle(Rectangle rectangle) {
+  public void setRectangle(RectanglePdf rectangle) {
     this.rectangle = rectangle;
   }
 

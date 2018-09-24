@@ -24,8 +24,7 @@ package com.aspose.asposecloudpdf.model;
 
 import java.util.Objects;
 import com.aspose.asposecloudpdf.model.Annotations;
-import com.aspose.asposecloudpdf.model.HttpStatusCode;
-import com.aspose.asposecloudpdf.model.SaaSposeResponse;
+import com.aspose.asposecloudpdf.model.AsposeResponse;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -39,7 +38,7 @@ import java.io.IOException;
  * AnnotationsResponse
  */
 
-public class AnnotationsResponse extends SaaSposeResponse {
+public class AnnotationsResponse extends AsposeResponse {
   @SerializedName("Annotations")
   private Annotations annotations = null;
 
