@@ -24,7 +24,12 @@ package com.aspose.asposecloudpdf.model;
 
 import java.util.Objects;
 import com.aspose.asposecloudpdf.model.Annotation;
-import com.aspose.asposecloudpdf.model.AsposeResponse;
+import com.aspose.asposecloudpdf.model.AnnotationFlags;
+import com.aspose.asposecloudpdf.model.AnnotationType;
+import com.aspose.asposecloudpdf.model.HorizontalAlignment;
+import com.aspose.asposecloudpdf.model.Link;
+import com.aspose.asposecloudpdf.model.RectanglePdf;
+import com.aspose.asposecloudpdf.model.VerticalAlignment;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -33,31 +38,33 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.List;
 
 /**
- * AnnotationResponse
+ * Provides annotation.
  */
+@ApiModel(description = "Provides annotation.")
 
-public class AnnotationResponse extends AsposeResponse {
-  @SerializedName("Annotation")
-  private Annotation annotation = null;
+public class AnnotationInfo extends Annotation {
+  @SerializedName("AnnotationType")
+  private AnnotationType annotationType = null;
 
-  public AnnotationResponse annotation(Annotation annotation) {
-    this.annotation = annotation;
+  public AnnotationInfo annotationType(AnnotationType annotationType) {
+    this.annotationType = annotationType;
     return this;
   }
 
    /**
-   * Get annotation
-   * @return annotation
+   * Gets annotation type.
+   * @return annotationType
   **/
-  @ApiModelProperty(value = "")
-  public Annotation getAnnotation() {
-    return annotation;
+  @ApiModelProperty(value = "Gets annotation type.")
+  public AnnotationType getAnnotationType() {
+    return annotationType;
   }
 
-  public void setAnnotation(Annotation annotation) {
-    this.annotation = annotation;
+  public void setAnnotationType(AnnotationType annotationType) {
+    this.annotationType = annotationType;
   }
 
 
@@ -69,23 +76,23 @@ public class AnnotationResponse extends AsposeResponse {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    AnnotationResponse annotationResponse = (AnnotationResponse) o;
-    return Objects.equals(this.annotation, annotationResponse.annotation) &&
+    AnnotationInfo annotationInfo = (AnnotationInfo) o;
+    return Objects.equals(this.annotationType, annotationInfo.annotationType) &&
         super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(annotation, super.hashCode());
+    return Objects.hash(annotationType, super.hashCode());
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class AnnotationResponse {\n");
+    sb.append("class AnnotationInfo {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    annotation: ").append(toIndentedString(annotation)).append("\n");
+    sb.append("    annotationType: ").append(toIndentedString(annotationType)).append("\n");
     sb.append("}");
     return sb.toString();
   }
