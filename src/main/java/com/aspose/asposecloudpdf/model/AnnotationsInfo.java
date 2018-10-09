@@ -23,6 +23,7 @@
 package com.aspose.asposecloudpdf.model;
 
 import java.util.Objects;
+import com.aspose.asposecloudpdf.model.AnnotationInfo;
 import com.aspose.asposecloudpdf.model.Link;
 import com.aspose.asposecloudpdf.model.LinkElement;
 import com.google.gson.TypeAdapter;
@@ -41,18 +42,18 @@ import java.util.List;
  */
 @ApiModel(description = "List of annotations.")
 
-public class Annotations extends LinkElement {
+public class AnnotationsInfo extends LinkElement {
   @SerializedName("List")
-  private List<LinkElement> list = null;
+  private List<AnnotationInfo> list = null;
 
-  public Annotations list(List<LinkElement> list) {
+  public AnnotationsInfo list(List<AnnotationInfo> list) {
     this.list = list;
     return this;
   }
 
-  public Annotations addListItem(LinkElement listItem) {
+  public AnnotationsInfo addListItem(AnnotationInfo listItem) {
     if (this.list == null) {
-      this.list = new ArrayList<LinkElement>();
+      this.list = new ArrayList<AnnotationInfo>();
     }
     this.list.add(listItem);
     return this;
@@ -63,11 +64,11 @@ public class Annotations extends LinkElement {
    * @return list
   **/
   @ApiModelProperty(value = "")
-  public List<LinkElement> getList() {
+  public List<AnnotationInfo> getList() {
     return list;
   }
 
-  public void setList(List<LinkElement> list) {
+  public void setList(List<AnnotationInfo> list) {
     this.list = list;
   }
 
@@ -80,8 +81,8 @@ public class Annotations extends LinkElement {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Annotations annotations = (Annotations) o;
-    return Objects.equals(this.list, annotations.list) &&
+    AnnotationsInfo annotationsInfo = (AnnotationsInfo) o;
+    return Objects.equals(this.list, annotationsInfo.list) &&
         super.equals(o);
   }
 
@@ -94,7 +95,7 @@ public class Annotations extends LinkElement {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Annotations {\n");
+    sb.append("class AnnotationsInfo {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("    list: ").append(toIndentedString(list)).append("\n");
     sb.append("}");
