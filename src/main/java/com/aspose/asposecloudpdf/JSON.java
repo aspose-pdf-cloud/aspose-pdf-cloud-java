@@ -32,6 +32,10 @@ import com.google.gson.stream.JsonWriter;
 import com.google.gson.JsonElement;
 import io.gsonfire.GsonFireBuilder;
 import io.gsonfire.TypeSelector;
+import org.threeten.bp.Instant;
+import org.threeten.bp.ZoneOffset;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import org.threeten.bp.LocalDate;
 import org.threeten.bp.OffsetDateTime;
 import org.threeten.bp.format.DateTimeFormatter;
@@ -185,10 +189,18 @@ public class JSON {
                     return null;
                 default:
                     String date = in.nextString();
-                    if (date.endsWith("+0000")) {
-                        date = date.substring(0, date.length()-5) + "Z";
+                    Pattern pattern = Pattern.compile("\\/Date\\((\\d+?)000\\+0000\\)\\/");
+                    Matcher matcher = pattern.matcher(date);
+                    if (matcher.matches()) {
+                        date = matcher.group(1);
+                        if (date.endsWith("+0000")) {
+                            date = date.substring(0, date.length() - 5) + "Z";
+                        }
+                        OffsetDateTime ret = OffsetDateTime.ofInstant(Instant.ofEpochSecond(Long.parseLong(date)), ZoneOffset.UTC);
+                        return ret;
+                    } else {
+                        return null;
                     }
-                    return OffsetDateTime.parse(date, formatter);
             }
         }
     }
