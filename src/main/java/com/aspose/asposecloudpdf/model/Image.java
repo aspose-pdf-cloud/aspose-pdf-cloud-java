@@ -25,7 +25,7 @@ package com.aspose.asposecloudpdf.model;
 import java.util.Objects;
 import com.aspose.asposecloudpdf.model.Link;
 import com.aspose.asposecloudpdf.model.LinkElement;
-import com.aspose.asposecloudpdf.model.RectanglePdf;
+import com.aspose.asposecloudpdf.model.Rectangle;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -52,7 +52,7 @@ public class Image extends LinkElement {
   private String id = null;
 
   @SerializedName("Rectangle")
-  private RectanglePdf rectangle = null;
+  private Rectangle rectangle = null;
 
   @SerializedName("PageNumber")
   private Integer pageNumber = null;
@@ -111,7 +111,7 @@ public class Image extends LinkElement {
     this.id = id;
   }
 
-  public Image rectangle(RectanglePdf rectangle) {
+  public Image rectangle(Rectangle rectangle) {
     this.rectangle = rectangle;
     return this;
   }
@@ -121,11 +121,11 @@ public class Image extends LinkElement {
    * @return rectangle
   **/
   @ApiModelProperty(value = "Gets rectangle of the image.")
-  public RectanglePdf getRectangle() {
+  public Rectangle getRectangle() {
     return rectangle;
   }
 
-  public void setRectangle(RectanglePdf rectangle) {
+  public void setRectangle(Rectangle rectangle) {
     this.rectangle = rectangle;
   }
 
