@@ -31,7 +31,7 @@ import com.aspose.asposecloudpdf.model.Link;
 import com.aspose.asposecloudpdf.model.MarkupAnnotation;
 import com.aspose.asposecloudpdf.model.Point;
 import com.aspose.asposecloudpdf.model.PolyIntent;
-import com.aspose.asposecloudpdf.model.RectanglePdf;
+import com.aspose.asposecloudpdf.model.Rectangle;
 import com.aspose.asposecloudpdf.model.VerticalAlignment;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;

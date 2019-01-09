@@ -24,12 +24,13 @@ package com.aspose.asposecloudpdf.model;
 
 import java.util.Objects;
 import com.aspose.asposecloudpdf.model.AnnotationFlags;
+import com.aspose.asposecloudpdf.model.Color;
 import com.aspose.asposecloudpdf.model.FreeTextIntent;
 import com.aspose.asposecloudpdf.model.HorizontalAlignment;
 import com.aspose.asposecloudpdf.model.Justification;
 import com.aspose.asposecloudpdf.model.Link;
 import com.aspose.asposecloudpdf.model.MarkupAnnotation;
-import com.aspose.asposecloudpdf.model.RectanglePdf;
+import com.aspose.asposecloudpdf.model.Rectangle;
 import com.aspose.asposecloudpdf.model.Rotation;
 import com.aspose.asposecloudpdf.model.TextStyle;
 import com.aspose.asposecloudpdf.model.VerticalAlignment;

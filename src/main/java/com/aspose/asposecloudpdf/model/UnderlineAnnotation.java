@@ -29,7 +29,7 @@ import com.aspose.asposecloudpdf.model.HorizontalAlignment;
 import com.aspose.asposecloudpdf.model.Link;
 import com.aspose.asposecloudpdf.model.MarkupAnnotation;
 import com.aspose.asposecloudpdf.model.Point;
-import com.aspose.asposecloudpdf.model.RectanglePdf;
+import com.aspose.asposecloudpdf.model.Rectangle;
 import com.aspose.asposecloudpdf.model.VerticalAlignment;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -48,29 +48,8 @@ import java.util.List;
 @ApiModel(description = "Provides UnderlineAnnotation.")
 
 public class UnderlineAnnotation extends MarkupAnnotation {
-  @SerializedName("Color")
-  private Color color = null;
-
   @SerializedName("QuadPoints")
   private List<Point> quadPoints = null;
-
-  public UnderlineAnnotation color(Color color) {
-    this.color = color;
-    return this;
-  }
-
-   /**
-   * Color of the annotation.
-   * @return color
-  **/
-  @ApiModelProperty(value = "Color of the annotation.")
-  public Color getColor() {
-    return color;
-  }
-
-  public void setColor(Color color) {
-    this.color = color;
-  }
 
   public UnderlineAnnotation quadPoints(List<Point> quadPoints) {
     this.quadPoints = quadPoints;
@@ -108,14 +87,13 @@ public class UnderlineAnnotation extends MarkupAnnotation {
       return false;
     }
     UnderlineAnnotation underlineAnnotation = (UnderlineAnnotation) o;
-    return Objects.equals(this.color, underlineAnnotation.color) &&
-        Objects.equals(this.quadPoints, underlineAnnotation.quadPoints) &&
+    return Objects.equals(this.quadPoints, underlineAnnotation.quadPoints) &&
         super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(color, quadPoints, super.hashCode());
+    return Objects.hash(quadPoints, super.hashCode());
   }
 
 
@@ -124,7 +102,6 @@ public class UnderlineAnnotation extends MarkupAnnotation {
     StringBuilder sb = new StringBuilder();
     sb.append("class UnderlineAnnotation {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    color: ").append(toIndentedString(color)).append("\n");
     sb.append("    quadPoints: ").append(toIndentedString(quadPoints)).append("\n");
     sb.append("}");
     return sb.toString();

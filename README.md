@@ -1,6 +1,6 @@
 ﻿# Aspose.PDF Cloud
 - API version: 2.0
-- Package version: 18.11.0
+- Package version: 18.12.0
 
 [Aspose.PDF Cloud](https://products.aspose.cloud/pdf) is a true REST API that enables you to perform a wide range of document processing operations including creation, manipulation, conversion and rendering of PDF documents in the cloud.
 
@@ -37,7 +37,7 @@ Add this dependency to your project's POM:
 <dependency>
     <groupId>com.aspose</groupId>
     <artifactId>aspose-cloud-pdf</artifactId>
-    <version>18.11.0</version>
+    <version>18.12.0</version>
     <scope>compile</scope>
 </dependency>
 ```
@@ -47,7 +47,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.aspose:aspose-cloud-pdf:18.11.0"
+compile "com.aspose:aspose-cloud-pdf:18.12.0"
 ```
 
 ### Others
@@ -58,7 +58,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/aspose-cloud-pdf-18.11.0.jar
+* target/aspose-cloud-pdf-18.12.0.jar
 * target/lib/*.jar
 
 ## Getting Started
@@ -119,6 +119,8 @@ Class | Method | HTTP request | Description
 *PdfApi* | [**deleteDocumentAnnotations**](docs/PdfApi.md#deleteDocumentAnnotations) | **DELETE** /pdf/\{name}/annotations | Delete all annotations from the document
 *PdfApi* | [**deleteDocumentLinkAnnotations**](docs/PdfApi.md#deleteDocumentLinkAnnotations) | **DELETE** /pdf/\{name}/links | Delete all link annotations from the document
 *PdfApi* | [**deleteField**](docs/PdfApi.md#deleteField) | **DELETE** /pdf/\{name}/fields/\{fieldName} | Delete document field by name.
+*PdfApi* | [**deleteFile**](docs/PdfApi.md#deleteFile) | **DELETE** /storage/file | Remove a specific file 
+*PdfApi* | [**deleteFolder**](docs/PdfApi.md#deleteFolder) | **DELETE** /storage/folder | Remove a specific folder 
 *PdfApi* | [**deleteImage**](docs/PdfApi.md#deleteImage) | **DELETE** /pdf/\{name}/images/\{imageId} | Delete image from document page.
 *PdfApi* | [**deleteLinkAnnotation**](docs/PdfApi.md#deleteLinkAnnotation) | **DELETE** /pdf/\{name}/links/\{linkId} | Delete document page link annotation by ID
 *PdfApi* | [**deletePage**](docs/PdfApi.md#deletePage) | **DELETE** /pdf/\{name}/pages/\{pageNumber} | Delete document page by its number.
@@ -128,6 +130,7 @@ Class | Method | HTTP request | Description
 *PdfApi* | [**deleteProperty**](docs/PdfApi.md#deleteProperty) | **DELETE** /pdf/\{name}/documentproperties/\{propertyName} | Delete document property.
 *PdfApi* | [**getCaretAnnotation**](docs/PdfApi.md#getCaretAnnotation) | **GET** /pdf/\{name}/annotations/caret/\{annotationId} | Read document page caret annotation by ID.
 *PdfApi* | [**getCircleAnnotation**](docs/PdfApi.md#getCircleAnnotation) | **GET** /pdf/\{name}/annotations/circle/\{annotationId} | Read document page circle annotation by ID.
+*PdfApi* | [**getDiscUsage**](docs/PdfApi.md#getDiscUsage) | **GET** /storage/disc | Check the disk usage of the current account 
 *PdfApi* | [**getDocument**](docs/PdfApi.md#getDocument) | **GET** /pdf/\{name} | Read common document info.
 *PdfApi* | [**getDocumentAnnotations**](docs/PdfApi.md#getDocumentAnnotations) | **GET** /pdf/\{name}/annotations | Read documant page annotations. Returns only FreeTextAnnotations, TextAnnotations, other annotations will implemented next releases.
 *PdfApi* | [**getDocumentAttachmentByIndex**](docs/PdfApi.md#getDocumentAttachmentByIndex) | **GET** /pdf/\{name}/attachments/\{attachmentIndex} | Read document attachment info by its index.
@@ -165,9 +168,12 @@ Class | Method | HTTP request | Description
 *PdfApi* | [**getImageExtractAsTiff**](docs/PdfApi.md#getImageExtractAsTiff) | **GET** /pdf/\{name}/images/\{imageId}/extract/tiff | Extract document image in TIFF format
 *PdfApi* | [**getImages**](docs/PdfApi.md#getImages) | **GET** /pdf/\{name}/pages/\{pageNumber}/images | Read document images.
 *PdfApi* | [**getInkAnnotation**](docs/PdfApi.md#getInkAnnotation) | **GET** /pdf/\{name}/annotations/ink/\{annotationId} | Read document page ink annotation by ID.
+*PdfApi* | [**getIsExist**](docs/PdfApi.md#getIsExist) | **GET** /storage/exist | Check if a specific file or folder exists
+*PdfApi* | [**getIsStorageExist**](docs/PdfApi.md#getIsStorageExist) | **GET** /storage/\{name}/exist | Check if storage exists 
 *PdfApi* | [**getLaTeXInStorageToPdf**](docs/PdfApi.md#getLaTeXInStorageToPdf) | **GET** /pdf/create/latex | Convert LaTeX file (located on storage) to PDF format and return resulting file in response. 
 *PdfApi* | [**getLineAnnotation**](docs/PdfApi.md#getLineAnnotation) | **GET** /pdf/\{name}/annotations/line/\{annotationId} | Read document page line annotation by ID.
 *PdfApi* | [**getLinkAnnotation**](docs/PdfApi.md#getLinkAnnotation) | **GET** /pdf/\{name}/links/\{linkId} | Read document link annotation by ID.
+*PdfApi* | [**getListFileVersions**](docs/PdfApi.md#getListFileVersions) | **GET** /storage/version | Get the file&#39;s versions list 
 *PdfApi* | [**getListFiles**](docs/PdfApi.md#getListFiles) | **GET** /storage/folder | Get the file listing of a specific folder 
 *PdfApi* | [**getMhtInStorageToPdf**](docs/PdfApi.md#getMhtInStorageToPdf) | **GET** /pdf/create/mht | Convert MHT file (located on storage) to PDF format and return resulting file in response. 
 *PdfApi* | [**getPage**](docs/PdfApi.md#getPage) | **GET** /pdf/\{name}/pages/\{pageNumber} | Read document page info.
@@ -230,7 +236,10 @@ Class | Method | HTTP request | Description
 *PdfApi* | [**postAppendDocument**](docs/PdfApi.md#postAppendDocument) | **POST** /pdf/\{name}/appendDocument | Append document to existing one.
 *PdfApi* | [**postCreateField**](docs/PdfApi.md#postCreateField) | **POST** /pdf/\{name}/fields | Create field.
 *PdfApi* | [**postDocumentTextReplace**](docs/PdfApi.md#postDocumentTextReplace) | **POST** /pdf/\{name}/text/replace | Document&#39;s replace text method.
+*PdfApi* | [**postFlattenDocument**](docs/PdfApi.md#postFlattenDocument) | **POST** /pdf/\{name}/flatten | Removes all fields from the document and place their values instead.
 *PdfApi* | [**postInsertImage**](docs/PdfApi.md#postInsertImage) | **POST** /pdf/\{name}/pages/\{pageNumber}/images | Insert image to document page.
+*PdfApi* | [**postMoveFile**](docs/PdfApi.md#postMoveFile) | **POST** /storage/file | Move a specific file
+*PdfApi* | [**postMoveFolder**](docs/PdfApi.md#postMoveFolder) | **POST** /storage/folder | Move a specific folder 
 *PdfApi* | [**postMovePage**](docs/PdfApi.md#postMovePage) | **POST** /pdf/\{name}/pages/\{pageNumber}/movePage | Move page to new position.
 *PdfApi* | [**postOptimizeDocument**](docs/PdfApi.md#postOptimizeDocument) | **POST** /pdf/\{name}/optimize | Optimize document.
 *PdfApi* | [**postPageCaretAnnotations**](docs/PdfApi.md#postPageCaretAnnotations) | **POST** /pdf/\{name}/pages/\{pageNumber}/annotations/caret | Add document page caret annotations.
@@ -258,6 +267,7 @@ Class | Method | HTTP request | Description
 *PdfApi* | [**putCircleAnnotation**](docs/PdfApi.md#putCircleAnnotation) | **PUT** /pdf/\{name}/annotations/circle/\{annotationId} | Replace document circle annotation
 *PdfApi* | [**putCreate**](docs/PdfApi.md#putCreate) | **PUT** /storage/file | Upload a specific file 
 *PdfApi* | [**putCreateDocument**](docs/PdfApi.md#putCreateDocument) | **PUT** /pdf/\{name} | Create empty document.
+*PdfApi* | [**putCreateFolder**](docs/PdfApi.md#putCreateFolder) | **PUT** /storage/folder | Create the folder 
 *PdfApi* | [**putEpubInStorageToPdf**](docs/PdfApi.md#putEpubInStorageToPdf) | **PUT** /pdf/\{name}/create/epub | Convert EPUB file (located on storage) to PDF format and upload resulting file to storage. 
 *PdfApi* | [**putFieldsFlatten**](docs/PdfApi.md#putFieldsFlatten) | **PUT** /pdf/\{name}/fields/flatten | Flatten form fields in document.
 *PdfApi* | [**putFreeTextAnnotation**](docs/PdfApi.md#putFreeTextAnnotation) | **PUT** /pdf/\{name}/annotations/freetext/\{annotationId} | Replace document free text annotation
@@ -348,11 +358,13 @@ Class | Method | HTTP request | Description
  - [Color](docs/Color.md)
  - [ColorDepth](docs/ColorDepth.md)
  - [CompressionType](docs/CompressionType.md)
+ - [DiscUsage](docs/DiscUsage.md)
  - [DocFormat](docs/DocFormat.md)
  - [DocRecognitionMode](docs/DocRecognitionMode.md)
  - [DocumentPrivilege](docs/DocumentPrivilege.md)
  - [EpubRecognitionMode](docs/EpubRecognitionMode.md)
  - [FieldType](docs/FieldType.md)
+ - [FileExist](docs/FileExist.md)
  - [FontEncodingRules](docs/FontEncodingRules.md)
  - [FontSavingModes](docs/FontSavingModes.md)
  - [FontStyles](docs/FontStyles.md)
@@ -382,7 +394,7 @@ Class | Method | HTTP request | Description
  - [Point](docs/Point.md)
  - [PolyIntent](docs/PolyIntent.md)
  - [RasterImagesSavingModes](docs/RasterImagesSavingModes.md)
- - [RectanglePdf](docs/RectanglePdf.md)
+ - [Rectangle](docs/Rectangle.md)
  - [Rotation](docs/Rotation.md)
  - [Segment](docs/Segment.md)
  - [ShapeType](docs/ShapeType.md)
@@ -416,6 +428,7 @@ Class | Method | HTTP request | Description
  - [CircleAnnotationResponse](docs/CircleAnnotationResponse.md)
  - [CircleAnnotations](docs/CircleAnnotations.md)
  - [CircleAnnotationsResponse](docs/CircleAnnotationsResponse.md)
+ - [DiscUsageResponse](docs/DiscUsageResponse.md)
  - [Document](docs/Document.md)
  - [DocumentPageResponse](docs/DocumentPageResponse.md)
  - [DocumentPagesResponse](docs/DocumentPagesResponse.md)
@@ -428,6 +441,9 @@ Class | Method | HTTP request | Description
  - [FieldResponse](docs/FieldResponse.md)
  - [Fields](docs/Fields.md)
  - [FieldsResponse](docs/FieldsResponse.md)
+ - [FileExistResponse](docs/FileExistResponse.md)
+ - [FileVersion](docs/FileVersion.md)
+ - [FileVersionsResponse](docs/FileVersionsResponse.md)
  - [FilesResponse](docs/FilesResponse.md)
  - [FreeTextAnnotationResponse](docs/FreeTextAnnotationResponse.md)
  - [FreeTextAnnotations](docs/FreeTextAnnotations.md)
@@ -469,6 +485,7 @@ Class | Method | HTTP request | Description
  - [SquigglyAnnotationResponse](docs/SquigglyAnnotationResponse.md)
  - [SquigglyAnnotations](docs/SquigglyAnnotations.md)
  - [SquigglyAnnotationsResponse](docs/SquigglyAnnotationsResponse.md)
+ - [StorageExistResponse](docs/StorageExistResponse.md)
  - [StrikeOutAnnotationResponse](docs/StrikeOutAnnotationResponse.md)
  - [StrikeOutAnnotations](docs/StrikeOutAnnotations.md)
  - [StrikeOutAnnotationsResponse](docs/StrikeOutAnnotationsResponse.md)
