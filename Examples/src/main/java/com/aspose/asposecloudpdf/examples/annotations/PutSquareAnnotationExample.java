@@ -1,6 +1,5 @@
 package com.aspose.asposecloudpdf.examples.annotations;
 
-import java.awt.List;
 import java.util.ArrayList;
 
 import com.aspose.asposecloudpdf.ApiException;
@@ -9,7 +8,7 @@ import com.aspose.asposecloudpdf.examples.Common;
 import com.aspose.asposecloudpdf.model.AnnotationFlags;
 import com.aspose.asposecloudpdf.model.AsposeResponse;
 import com.aspose.asposecloudpdf.model.HorizontalAlignment;
-import com.aspose.asposecloudpdf.model.RectanglePdf;
+import com.aspose.asposecloudpdf.model.Rectangle;
 import com.aspose.asposecloudpdf.model.SquareAnnotation;
 import com.aspose.asposecloudpdf.model.SquareAnnotationsResponse;
 
@@ -21,7 +20,7 @@ public class PutSquareAnnotationExample {
 		PdfApi pdfApi = new PdfApi("XXXXXXXXXXX", "XXXXXXX");
 
 		Common.uploadFile(pdfApi, name);
-		RectanglePdf rect = new RectanglePdf()
+		Rectangle rect = new Rectangle()
                 .LLX(100.)
                 .LLY(100.)
                 .URX(200.)
@@ -32,7 +31,7 @@ public class PutSquareAnnotationExample {
 
         SquareAnnotation annotation = new SquareAnnotation();
         annotation.setName("Name Updated");
-        annotation.setRect(rect);
+        annotation.rect(rect);
         annotation.setFlags(flags);
         annotation.setHorizontalAlignment(HorizontalAlignment.CENTER);
         annotation.setRichText("Rich Text Updated");

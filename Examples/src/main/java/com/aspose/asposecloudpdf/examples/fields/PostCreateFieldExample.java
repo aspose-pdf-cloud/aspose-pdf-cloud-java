@@ -8,7 +8,7 @@ import com.aspose.asposecloudpdf.examples.Common;
 import com.aspose.asposecloudpdf.model.AsposeResponse;
 import com.aspose.asposecloudpdf.model.Field;
 import com.aspose.asposecloudpdf.model.FieldType;
-import com.aspose.asposecloudpdf.model.RectanglePdf;
+import com.aspose.asposecloudpdf.model.Rectangle;
 
 public class PostCreateFieldExample {
 
@@ -17,7 +17,7 @@ public class PostCreateFieldExample {
 		String name = "PdfWithAcroForm.pdf";
 		PdfApi pdfApi = new PdfApi("XXXXXXXXXXX", "XXXXXXX");
 		Common.uploadFile(pdfApi, name);
-		RectanglePdf rect = new RectanglePdf().LLX(50.).LLY(200.).URX(200.).URY(400.);
+		Rectangle rect = new Rectangle().LLX(50.).LLY(200.).URX(200.).URY(400.);
 
 		Field field = new Field();
 		field.setName("checkboxfield");

@@ -1,6 +1,5 @@
 package com.aspose.asposecloudpdf.examples.annotations;
 
-import java.awt.List;
 import java.util.ArrayList;
 
 import com.aspose.asposecloudpdf.ApiException;
@@ -11,7 +10,7 @@ import com.aspose.asposecloudpdf.model.AsposeResponse;
 import com.aspose.asposecloudpdf.model.CircleAnnotation;
 import com.aspose.asposecloudpdf.model.CircleAnnotationsResponse;
 import com.aspose.asposecloudpdf.model.HorizontalAlignment;
-import com.aspose.asposecloudpdf.model.RectanglePdf;
+import com.aspose.asposecloudpdf.model.Rectangle;
 
 public class PutCircleAnnotationExample {
 
@@ -21,14 +20,14 @@ public class PutCircleAnnotationExample {
 		PdfApi pdfApi = new PdfApi("XXXXXXXXXXX", "XXXXXXX");
 
 		Common.uploadFile(pdfApi, name);
-		RectanglePdf rect = new RectanglePdf().LLX(100.).LLY(100.).URX(200.).URY(200.);
+		Rectangle rect = new Rectangle().LLX(100.).LLY(100.).URX(200.).URY(200.);
 
 		ArrayList<AnnotationFlags> flags = new ArrayList<>();
 		flags.add(AnnotationFlags.DEFAULT);
 
 		CircleAnnotation annotation = new CircleAnnotation();
 		annotation.setName("Name Updated");
-		annotation.setRect(rect);
+		annotation.rect(rect);
 		annotation.setFlags(flags);
 		annotation.setHorizontalAlignment(HorizontalAlignment.CENTER);
 		annotation.setRichText("Rich Text Updated");

@@ -9,7 +9,7 @@ import com.aspose.asposecloudpdf.examples.Common;
 import com.aspose.asposecloudpdf.model.AnnotationFlags;
 import com.aspose.asposecloudpdf.model.AsposeResponse;
 import com.aspose.asposecloudpdf.model.HorizontalAlignment;
-import com.aspose.asposecloudpdf.model.RectanglePdf;
+import com.aspose.asposecloudpdf.model.Rectangle;
 import com.aspose.asposecloudpdf.model.SquareAnnotation;
 
 public class PostSquareAnnotationsExample {
@@ -22,7 +22,7 @@ public class PostSquareAnnotationsExample {
 		Common.uploadFile(pdfApi, name);
 		int pageNumber = 1;
 
-        RectanglePdf rect = new RectanglePdf()
+        Rectangle rect = new Rectangle()
                 .LLX(100.)
                 .LLY(100.)
                 .URX(200.)
@@ -33,7 +33,7 @@ public class PostSquareAnnotationsExample {
 
         SquareAnnotation annotation = new SquareAnnotation();
         annotation.setName("Name");
-        annotation.setRect(rect);
+        annotation.rect(rect);
         annotation.setFlags(flags);
         annotation.setHorizontalAlignment(HorizontalAlignment.CENTER);
         annotation.setRichText("Rich Text");

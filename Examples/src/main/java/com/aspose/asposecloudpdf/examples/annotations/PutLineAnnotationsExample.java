@@ -1,6 +1,5 @@
 package com.aspose.asposecloudpdf.examples.annotations;
 
-import java.awt.List;
 import java.util.ArrayList;
 
 import com.aspose.asposecloudpdf.ApiException;
@@ -12,7 +11,7 @@ import com.aspose.asposecloudpdf.model.HorizontalAlignment;
 import com.aspose.asposecloudpdf.model.LineAnnotation;
 import com.aspose.asposecloudpdf.model.LineAnnotationsResponse;
 import com.aspose.asposecloudpdf.model.Point;
-import com.aspose.asposecloudpdf.model.RectanglePdf;
+import com.aspose.asposecloudpdf.model.Rectangle;
 
 public class PutLineAnnotationsExample {
 
@@ -21,7 +20,7 @@ public class PutLineAnnotationsExample {
 		PdfApi pdfApi = new PdfApi("XXXXXXXXXXX", "XXXXXXX");
 
 		Common.uploadFile(pdfApi, name);
-		RectanglePdf rect = new RectanglePdf().LLX(100.).LLY(100.).URX(200.).URY(200.);
+		Rectangle rect = new Rectangle().LLX(100.).LLY(100.).URX(200.).URY(200.);
 
 		ArrayList<AnnotationFlags> flags = new ArrayList<AnnotationFlags>();
 		flags.add(AnnotationFlags.DEFAULT);

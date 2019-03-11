@@ -14,7 +14,7 @@ import com.aspose.asposecloudpdf.model.FreeTextAnnotationsResponse;
 import com.aspose.asposecloudpdf.model.FreeTextIntent;
 import com.aspose.asposecloudpdf.model.HorizontalAlignment;
 import com.aspose.asposecloudpdf.model.Justification;
-import com.aspose.asposecloudpdf.model.RectanglePdf;
+import com.aspose.asposecloudpdf.model.Rectangle;
 import com.aspose.asposecloudpdf.model.TextStyle;
 
 public class PutFreeTextAnnotationExample {
@@ -44,7 +44,7 @@ public class PutFreeTextAnnotationExample {
 		textStyle.setForegroundColor(foregroundColor);
 		textStyle.setBackgroundColor(backgroundColor);
 
-		RectanglePdf rect = new RectanglePdf().LLX(100.).LLY(100.).URX(200.).URY(200.);
+		Rectangle rect = new Rectangle().LLX(100.).LLY(100.).URX(200.).URY(200.);
 
 		List<AnnotationFlags> flags = new ArrayList<>();
 		flags.add(AnnotationFlags.DEFAULT);
@@ -52,7 +52,7 @@ public class PutFreeTextAnnotationExample {
 		FreeTextAnnotation freeTextAnnotation = new FreeTextAnnotation();
 		freeTextAnnotation.setName("Test Free Text");
 		freeTextAnnotation.setTextStyle(textStyle);
-		freeTextAnnotation.setRect(rect);
+		freeTextAnnotation.rect(rect);
 		freeTextAnnotation.setFlags(flags);
 		freeTextAnnotation.setHorizontalAlignment(HorizontalAlignment.CENTER);
 		freeTextAnnotation.setIntent(FreeTextIntent.FREETEXTTYPEWRITER);

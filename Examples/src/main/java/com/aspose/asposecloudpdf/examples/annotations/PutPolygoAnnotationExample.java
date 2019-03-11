@@ -11,7 +11,7 @@ import com.aspose.asposecloudpdf.model.HorizontalAlignment;
 import com.aspose.asposecloudpdf.model.Point;
 import com.aspose.asposecloudpdf.model.PolygonAnnotation;
 import com.aspose.asposecloudpdf.model.PolygonAnnotationsResponse;
-import com.aspose.asposecloudpdf.model.RectanglePdf;
+import com.aspose.asposecloudpdf.model.Rectangle;
 
 public class PutPolygoAnnotationExample {
 
@@ -21,7 +21,7 @@ public class PutPolygoAnnotationExample {
 		PdfApi pdfApi = new PdfApi("XXXXXXXXXXX", "78946fb4-3bd4-4d3e-b309-f9e2ff9ac6f9");
 		Common.uploadFile(pdfApi, name);
 		int pageNumber = 1;
-		RectanglePdf rect = new RectanglePdf().LLX(100.).LLY(100.).URX(200.).URY(200.);
+		Rectangle rect = new Rectangle().LLX(100.).LLY(100.).URX(200.).URY(200.);
 
 		ArrayList<Point> vertices = new ArrayList();
 		vertices.add(new Point().X(10.).Y(10.));

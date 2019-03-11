@@ -10,7 +10,7 @@ import com.aspose.asposecloudpdf.model.AnnotationFlags;
 import com.aspose.asposecloudpdf.model.AsposeResponse;
 import com.aspose.asposecloudpdf.model.HorizontalAlignment;
 import com.aspose.asposecloudpdf.model.Point;
-import com.aspose.asposecloudpdf.model.RectanglePdf;
+import com.aspose.asposecloudpdf.model.Rectangle;
 import com.aspose.asposecloudpdf.model.SquigglyAnnotation;
 import com.aspose.asposecloudpdf.model.SquigglyAnnotationsResponse;
 
@@ -22,7 +22,7 @@ public class PutSquigglyAnnotationExample {
 
 		PdfApi pdfApi = new PdfApi("b125f13bf6b76ed81ee990142d841195", "XXXXXXX");
 		Common.uploadFile(pdfApi, name);
-		RectanglePdf rect = new RectanglePdf().LLX(100.).LLY(100.).URX(200.).URY(200.);
+		Rectangle rect = new Rectangle().LLX(100.).LLY(100.).URX(200.).URY(200.);
 
 		List<AnnotationFlags> flags = new ArrayList<>();
 		flags.add(AnnotationFlags.DEFAULT);

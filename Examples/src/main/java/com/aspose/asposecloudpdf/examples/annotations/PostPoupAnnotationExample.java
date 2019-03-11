@@ -10,7 +10,7 @@ import com.aspose.asposecloudpdf.model.AnnotationFlags;
 import com.aspose.asposecloudpdf.model.AsposeResponse;
 import com.aspose.asposecloudpdf.model.HorizontalAlignment;
 import com.aspose.asposecloudpdf.model.PopupAnnotation;
-import com.aspose.asposecloudpdf.model.RectanglePdf;
+import com.aspose.asposecloudpdf.model.Rectangle;
 
 public class PostPoupAnnotationExample {
 
@@ -22,7 +22,7 @@ public class PostPoupAnnotationExample {
 		Common.uploadFile(pdfApi, name);
 		 String parentId = "GI5TCMR3GE2TQLBSGM3CYMJYGUWDENRV";
 
-	        RectanglePdf rect = new RectanglePdf()
+	        Rectangle rect = new Rectangle()
 	                .LLX(100.)
 	                .LLY(100.)
 	                .URX(200.)

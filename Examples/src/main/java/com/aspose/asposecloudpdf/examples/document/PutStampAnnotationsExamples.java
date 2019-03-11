@@ -1,4 +1,4 @@
-package com.aspose.asposecloudpdf.examples.annotations;
+package com.aspose.asposecloudpdf.examples.document;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,19 +8,21 @@ import com.aspose.asposecloudpdf.api.PdfApi;
 import com.aspose.asposecloudpdf.examples.Common;
 import com.aspose.asposecloudpdf.model.AnnotationFlags;
 import com.aspose.asposecloudpdf.model.AsposeResponse;
-import com.aspose.asposecloudpdf.model.CaretAnnotation;
 import com.aspose.asposecloudpdf.model.HorizontalAlignment;
 import com.aspose.asposecloudpdf.model.Rectangle;
+import com.aspose.asposecloudpdf.model.StampAnnotation;
+import com.aspose.asposecloudpdf.model.StampAnnotationsResponse;
 
-public class GetPageCarretAnnotationExample {
+public class PutStampAnnotationsExamples {
 
 	public static void main(String[] args) throws ApiException {
-		
-		String name = "PdfWithAnnotations.pdf";
+		 String name = "PdfWithAnnotations.pdf";
+			PdfApi pdfApi = new PdfApi("XXXXXXXXXXX", "XXXXXXX");
 
-		PdfApi pdfApi = new PdfApi("XXXXXXXXXXX", "XXXXXXX");
-		Common.uploadFile(pdfApi, name);
-		 int pageNumber = 1;
+	        Common.uploadFile(pdfApi,name);
+
+	        String attachmentFile = "4pages.pdf";
+	        Common.uploadFile(pdfApi,attachmentFile);
 
 	        Rectangle rect = new Rectangle()
 	                .LLX(100.)
@@ -31,7 +33,7 @@ public class GetPageCarretAnnotationExample {
 	        List<AnnotationFlags> flags = new ArrayList<>();
 	        flags.add(AnnotationFlags.DEFAULT);
 
-	        CaretAnnotation annotation = new CaretAnnotation();
+	        StampAnnotation annotation = new StampAnnotation();
 	        annotation.setName("Name");
 	        annotation.setRect(rect);
 	        annotation.setFlags(flags);
@@ -40,14 +42,14 @@ public class GetPageCarretAnnotationExample {
 	        annotation.setSubject("Subj");
 	        annotation.setZindex(1);
 	        annotation.setTitle("Title");
-	        annotation.setFrame(rect);
-	        annotation.setModified("02/02/2018 00:00:00.000 AM");
+	        annotation.setModified("01/01/2018 12:00:00.000 AM");
+	        annotation.setFilePath("" + '/' + attachmentFile);
 
-	        List<CaretAnnotation> annotations = new ArrayList<>();
-	        annotations.add(annotation);
+	        StampAnnotationsResponse responseAnnotations = pdfApi.getDocumentStampAnnotations(name, null, "");
+	        String annotationId = responseAnnotations.getAnnotations().getList().get(0).getId();
 
-	        AsposeResponse response = pdfApi.postPageCaretAnnotations(name, pageNumber, annotations, null, "");
-			System.out.println(response);
+	        AsposeResponse response = pdfApi.putStampAnnotation(name, annotationId, annotation, null, "");
+	        System.out.println(response);
 
 	}
 

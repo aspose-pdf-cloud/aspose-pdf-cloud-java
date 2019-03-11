@@ -1,4 +1,4 @@
-package com.aspose.asposecloudpdf.examples.annotations;
+package com.aspose.asposecloudpdf.examples.document;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,20 +8,22 @@ import com.aspose.asposecloudpdf.api.PdfApi;
 import com.aspose.asposecloudpdf.examples.Common;
 import com.aspose.asposecloudpdf.model.AnnotationFlags;
 import com.aspose.asposecloudpdf.model.AsposeResponse;
-import com.aspose.asposecloudpdf.model.CaretAnnotation;
-import com.aspose.asposecloudpdf.model.CaretAnnotationsResponse;
 import com.aspose.asposecloudpdf.model.HorizontalAlignment;
 import com.aspose.asposecloudpdf.model.Rectangle;
+import com.aspose.asposecloudpdf.model.ScreenAnnotation;
+import com.aspose.asposecloudpdf.model.ScreenAnnotationsResponse;
 
-public class PutCarretAnnotation {
+public class PutScreenAnnotationExample {
 
 	public static void main(String[] args) throws ApiException {
-		
-		String name = "PdfWithAnnotations.pdf";
-
 		PdfApi pdfApi = new PdfApi("XXXXXXXXXXX", "XXXXXXX");
-		Common.uploadFile(pdfApi, name);
-		Rectangle rect = new Rectangle()
+		String name = "PdfWithScreenAnnotations.pdf";
+		Common.uploadFile(pdfApi,name);
+
+        String attachmentFile = "ScreenMovie.swf";
+        Common.uploadFile(pdfApi,attachmentFile);
+
+        Rectangle rect = new Rectangle()
                 .LLX(100.)
                 .LLY(100.)
                 .URX(200.)
@@ -30,25 +32,21 @@ public class PutCarretAnnotation {
         List<AnnotationFlags> flags = new ArrayList<>();
         flags.add(AnnotationFlags.DEFAULT);
 
-
-        CaretAnnotation annotation = new CaretAnnotation();
-        annotation.setName("Name Updated");
-        annotation.rect(rect);
+        ScreenAnnotation annotation = new ScreenAnnotation();
+        annotation.setName("Name");
+        annotation.setRect(rect);
         annotation.setFlags(flags);
         annotation.setHorizontalAlignment(HorizontalAlignment.CENTER);
-        annotation.setRichText("Rich Text Updated");
-        annotation.setSubject("Subj Updated");
         annotation.setZindex(1);
-        annotation.setTitle("Title Updated");
-        annotation.setFrame(rect);
-        annotation.setModified("02/02/2018 00:00:00.000 AM");
+        annotation.setTitle("Title");
+        annotation.setModified("01/01/2018 12:00:00.000 AM");
+        annotation.setFilePath("" + '/' + attachmentFile);
 
-        CaretAnnotationsResponse responseAnnotations = pdfApi.getDocumentCaretAnnotations(name, null, "");
+        ScreenAnnotationsResponse responseAnnotations = pdfApi.getDocumentScreenAnnotations(name, null, "");
         String annotationId = responseAnnotations.getAnnotations().getList().get(0).getId();
 
-        AsposeResponse response = pdfApi.putCaretAnnotation(name, annotationId, annotation, null, "");
-		System.out.println(response.getCode());
-
+        AsposeResponse response = pdfApi.putScreenAnnotation(name, annotationId, annotation, null, "");
+        System.out.println(response);
 
 	}
 

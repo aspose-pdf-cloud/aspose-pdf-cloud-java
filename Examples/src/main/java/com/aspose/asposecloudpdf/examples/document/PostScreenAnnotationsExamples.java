@@ -1,4 +1,4 @@
-package com.aspose.asposecloudpdf.examples.annotations;
+package com.aspose.asposecloudpdf.examples.document;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,45 +9,41 @@ import com.aspose.asposecloudpdf.examples.Common;
 import com.aspose.asposecloudpdf.model.AnnotationFlags;
 import com.aspose.asposecloudpdf.model.AsposeResponse;
 import com.aspose.asposecloudpdf.model.HorizontalAlignment;
-import com.aspose.asposecloudpdf.model.Point;
-import com.aspose.asposecloudpdf.model.PolygonAnnotation;
 import com.aspose.asposecloudpdf.model.Rectangle;
+import com.aspose.asposecloudpdf.model.ScreenAnnotation;
 
-public class PostPagePolygonExample {
+public class PostScreenAnnotationsExamples {
 
 	public static void main(String[] args) throws ApiException {
-		String name = "PdfWithAnnotations.pdf";
 		PdfApi pdfApi = new PdfApi("XXXXXXXXXXX", "XXXXXXX");
+		String name = "PdfWithScreenAnnotations.pdf";
+		Common.uploadFile(pdfApi, name);
+
+		String attachmentFile = "ScreenMovie.swf";
+		Common.uploadFile(pdfApi, attachmentFile);
+
 		int pageNumber = 1;
 
-		Common.uploadFile(pdfApi, name);
 		Rectangle rect = new Rectangle().LLX(100.).LLY(100.).URX(200.).URY(200.);
-
-		ArrayList<Point> vertices = new ArrayList();
-		vertices.add(new Point().X(10.).Y(10.));
-		vertices.add(new Point().X(20.).Y(10.));
-		vertices.add(new Point().X(10.).Y(20.));
-		vertices.add(new Point().X(10.).Y(10.));
 
 		List<AnnotationFlags> flags = new ArrayList<>();
 		flags.add(AnnotationFlags.DEFAULT);
 
-		PolygonAnnotation annotation = new PolygonAnnotation();
+		ScreenAnnotation annotation = new ScreenAnnotation();
 		annotation.setName("Name");
-		annotation.rect(rect);
+		annotation.setRect(rect);
 		annotation.setFlags(flags);
 		annotation.setHorizontalAlignment(HorizontalAlignment.CENTER);
-		annotation.setRichText("Rich Text");
-		annotation.setSubject("Subj");
 		annotation.setZindex(1);
 		annotation.setTitle("Title");
-		annotation.setVertices(vertices);
+		annotation.setModified("01/01/2018 12:00:00.000 AM");
+		annotation.setFilePath("" + '/' + attachmentFile);
 
-		List<PolygonAnnotation> annotations = new ArrayList<>();
+		List<ScreenAnnotation> annotations = new ArrayList<>();
 		annotations.add(annotation);
 
-		AsposeResponse response = pdfApi.postPagePolygonAnnotations(name, pageNumber, annotations, null, "");
-		System.out.println(response.getCode());
+		AsposeResponse response = pdfApi.postPageScreenAnnotations(name, pageNumber, annotations, null, "");
+		System.out.println(response);
 
 	}
 

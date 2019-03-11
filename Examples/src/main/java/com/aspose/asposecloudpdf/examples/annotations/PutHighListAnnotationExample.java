@@ -12,6 +12,7 @@ import com.aspose.asposecloudpdf.model.HighlightAnnotation;
 import com.aspose.asposecloudpdf.model.HighlightAnnotationsResponse;
 import com.aspose.asposecloudpdf.model.HorizontalAlignment;
 import com.aspose.asposecloudpdf.model.Point;
+import com.aspose.asposecloudpdf.model.Rectangle;
 import com.aspose.asposecloudpdf.model.RectanglePdf;
 
 public class PutHighListAnnotationExample {
@@ -22,7 +23,7 @@ public class PutHighListAnnotationExample {
 
 		PdfApi pdfApi = new PdfApi("XXXXXXXXXXX", "XXXXXXX");
 		Common.uploadFile(pdfApi, name);
-		RectanglePdf rect = new RectanglePdf().LLX(100.).LLY(100.).URX(200.).URY(200.);
+		Rectangle rect = new Rectangle().LLX(100.).LLY(100.).URX(200.).URY(200.);
 
 		List<AnnotationFlags> flags = new ArrayList<>();
 		flags.add(AnnotationFlags.DEFAULT);
@@ -35,7 +36,7 @@ public class PutHighListAnnotationExample {
 
 		HighlightAnnotation annotation = new HighlightAnnotation();
 		annotation.setName("Name Updated");
-		annotation.setRect(rect);
+		annotation.rect(rect);
 		annotation.setFlags(flags);
 		annotation.setHorizontalAlignment(HorizontalAlignment.CENTER);
 		annotation.setRichText("Rich Text Updated");

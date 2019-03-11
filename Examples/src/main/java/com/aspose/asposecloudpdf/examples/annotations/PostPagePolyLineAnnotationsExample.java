@@ -12,7 +12,7 @@ import com.aspose.asposecloudpdf.model.AsposeResponse;
 import com.aspose.asposecloudpdf.model.HorizontalAlignment;
 import com.aspose.asposecloudpdf.model.Point;
 import com.aspose.asposecloudpdf.model.PolyLineAnnotation;
-import com.aspose.asposecloudpdf.model.RectanglePdf;
+import com.aspose.asposecloudpdf.model.Rectangle;
 
 public class PostPagePolyLineAnnotationsExample {
 
@@ -26,7 +26,7 @@ public class PostPagePolyLineAnnotationsExample {
 
 		 int pageNumber = 1;
 
-	        RectanglePdf rect = new RectanglePdf()
+	        Rectangle rect = new Rectangle()
 	                .LLX(100.)
 	                .LLY(100.)
 	                .URX(200.)

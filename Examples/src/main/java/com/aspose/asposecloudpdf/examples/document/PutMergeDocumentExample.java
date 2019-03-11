@@ -1,11 +1,11 @@
 package com.aspose.asposecloudpdf.examples.document;
 
-import java.io.File;
 import java.util.ArrayList;
 
 import com.aspose.asposecloudpdf.ApiException;
 import com.aspose.asposecloudpdf.api.PdfApi;
 import com.aspose.asposecloudpdf.examples.Common;
+import com.aspose.asposecloudpdf.model.DocumentResponse;
 import com.aspose.asposecloudpdf.model.MergeDocuments;
 
 public class PutMergeDocumentExample {
@@ -31,7 +31,7 @@ public class PutMergeDocumentExample {
 		mergeDocuments.setList(nameList);
 		String folder = "";
 
-		File response = pdfApi.putMergeDocuments(resultName, mergeDocuments, null, folder);
+		DocumentResponse response= pdfApi.putMergeDocuments(resultName, mergeDocuments, null, folder);
 	}
 
 }

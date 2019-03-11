@@ -1,4 +1,4 @@
-package com.aspose.asposecloudpdf.examples.annotations;
+package com.aspose.asposecloudpdf.examples.document;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,19 +8,21 @@ import com.aspose.asposecloudpdf.api.PdfApi;
 import com.aspose.asposecloudpdf.examples.Common;
 import com.aspose.asposecloudpdf.model.AnnotationFlags;
 import com.aspose.asposecloudpdf.model.AsposeResponse;
-import com.aspose.asposecloudpdf.model.CaretAnnotation;
+import com.aspose.asposecloudpdf.model.FileAttachmentAnnotation;
 import com.aspose.asposecloudpdf.model.HorizontalAlignment;
 import com.aspose.asposecloudpdf.model.Rectangle;
 
-public class GetPageCarretAnnotationExample {
+public class PostPageFileAttachmentExamples {
 
 	public static void main(String[] args) throws ApiException {
-		
-		String name = "PdfWithAnnotations.pdf";
+		  String name = "PdfWithAnnotations.pdf";
+		  PdfApi pdfApi = new PdfApi("XXXXXXXXXXX", "XXXXXXX");
+		  Common.uploadFile(pdfApi,name);
 
-		PdfApi pdfApi = new PdfApi("XXXXXXXXXXX", "XXXXXXX");
-		Common.uploadFile(pdfApi, name);
-		 int pageNumber = 1;
+	        String attachmentFile = "4pages.pdf";
+	        Common.uploadFile(pdfApi,attachmentFile);
+
+	        int pageNumber = 1;
 
 	        Rectangle rect = new Rectangle()
 	                .LLX(100.)
@@ -31,7 +33,7 @@ public class GetPageCarretAnnotationExample {
 	        List<AnnotationFlags> flags = new ArrayList<>();
 	        flags.add(AnnotationFlags.DEFAULT);
 
-	        CaretAnnotation annotation = new CaretAnnotation();
+	        FileAttachmentAnnotation annotation = new FileAttachmentAnnotation();
 	        annotation.setName("Name");
 	        annotation.setRect(rect);
 	        annotation.setFlags(flags);
@@ -40,14 +42,15 @@ public class GetPageCarretAnnotationExample {
 	        annotation.setSubject("Subj");
 	        annotation.setZindex(1);
 	        annotation.setTitle("Title");
-	        annotation.setFrame(rect);
-	        annotation.setModified("02/02/2018 00:00:00.000 AM");
+	        annotation.setModified("01/01/2018 12:00:00.000 AM");
+	        annotation.setFilePath("" + '/' + attachmentFile);
+	        annotation.setFileName(attachmentFile);
 
-	        List<CaretAnnotation> annotations = new ArrayList<>();
+	        List<FileAttachmentAnnotation> annotations = new ArrayList<>();
 	        annotations.add(annotation);
 
-	        AsposeResponse response = pdfApi.postPageCaretAnnotations(name, pageNumber, annotations, null, "");
-			System.out.println(response);
+	        AsposeResponse response = pdfApi.postPageFileAttachmentAnnotations(name, pageNumber, annotations, null, "");
+	        System.out.println(response);
 
 	}
 

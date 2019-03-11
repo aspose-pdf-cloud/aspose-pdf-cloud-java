@@ -12,6 +12,7 @@ import com.aspose.asposecloudpdf.model.CapStyle;
 import com.aspose.asposecloudpdf.model.HorizontalAlignment;
 import com.aspose.asposecloudpdf.model.InkAnnotation;
 import com.aspose.asposecloudpdf.model.Point;
+import com.aspose.asposecloudpdf.model.Rectangle;
 import com.aspose.asposecloudpdf.model.RectanglePdf;
 
 public class PostPageInkAnnotationExample {
@@ -24,7 +25,7 @@ public class PostPageInkAnnotationExample {
 		Common.uploadFile(pdfApi, name);
 		  int pageNumber = 1;
 
-	        RectanglePdf rect = new RectanglePdf()
+	        Rectangle rect = new Rectangle()
 	                .LLX(100.)
 	                .LLY(100.)
 	                .URX(200.)

@@ -10,7 +10,7 @@ import com.aspose.asposecloudpdf.model.AnnotationFlags;
 import com.aspose.asposecloudpdf.model.AsposeResponse;
 import com.aspose.asposecloudpdf.model.HorizontalAlignment;
 import com.aspose.asposecloudpdf.model.Point;
-import com.aspose.asposecloudpdf.model.RectanglePdf;
+import com.aspose.asposecloudpdf.model.Rectangle;
 import com.aspose.asposecloudpdf.model.UnderlineAnnotation;
 
 public class PostPageUnderlineAnnotationExample {
@@ -20,7 +20,7 @@ public class PostPageUnderlineAnnotationExample {
 
 		PdfApi pdfApi = new PdfApi("XXXXXXXXXXX", "XXXXXXX");
 		Common.uploadFile(pdfApi, name);
-		RectanglePdf rect = new RectanglePdf().LLX(100.).LLY(100.).URX(200.).URY(200.);
+		Rectangle rect = new Rectangle().LLX(100.).LLY(100.).URX(200.).URY(200.);
         int pageNumber = 1;
 
 		List<AnnotationFlags> flags = new ArrayList<>();
@@ -34,7 +34,7 @@ public class PostPageUnderlineAnnotationExample {
 
 		UnderlineAnnotation annotation = new UnderlineAnnotation();
 		annotation.setName("Name");
-		annotation.setRect(rect);
+		annotation.rect(rect);
 		annotation.setFlags(flags);
 		annotation.setHorizontalAlignment(HorizontalAlignment.CENTER);
 		annotation.setRichText("Rich Text");

@@ -10,7 +10,7 @@ import com.aspose.asposecloudpdf.model.AnnotationFlags;
 import com.aspose.asposecloudpdf.model.AsposeResponse;
 import com.aspose.asposecloudpdf.model.CircleAnnotation;
 import com.aspose.asposecloudpdf.model.HorizontalAlignment;
-import com.aspose.asposecloudpdf.model.RectanglePdf;
+import com.aspose.asposecloudpdf.model.Rectangle;
 
 public class PostPageCircleAnnotationExample {
 
@@ -21,7 +21,7 @@ public class PostPageCircleAnnotationExample {
 
 		Common.uploadFile(pdfApi, name);
 
-		RectanglePdf rect = new RectanglePdf().LLX(100.).LLY(100.).URX(200.).URY(200.);
+		Rectangle rect = new Rectangle().LLX(100.).LLY(100.).URX(200.).URY(200.);
 
 		List<AnnotationFlags> flags = new ArrayList<>();
 		flags.add(AnnotationFlags.DEFAULT);

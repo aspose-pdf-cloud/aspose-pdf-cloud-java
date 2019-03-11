@@ -13,7 +13,7 @@ import com.aspose.asposecloudpdf.model.HorizontalAlignment;
 import com.aspose.asposecloudpdf.model.Point;
 import com.aspose.asposecloudpdf.model.PolyLineAnnotation;
 import com.aspose.asposecloudpdf.model.PolyLineAnnotationsResponse;
-import com.aspose.asposecloudpdf.model.RectanglePdf;
+import com.aspose.asposecloudpdf.model.Rectangle;
 
 public class PutPolyLineAnnotationExample {
 
@@ -24,7 +24,7 @@ public class PutPolyLineAnnotationExample {
 		PdfApi pdfApi = new PdfApi("XXXXXXXXXXX", "XXXXXXX");
 
 		Common.uploadFile(pdfApi, name);
-        RectanglePdf rect = new RectanglePdf()
+        Rectangle rect = new Rectangle()
                 .LLX(100.)
                 .LLY(100.)
                 .URX(200.)

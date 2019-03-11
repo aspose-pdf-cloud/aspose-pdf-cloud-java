@@ -11,7 +11,7 @@ import com.aspose.asposecloudpdf.model.AsposeResponse;
 import com.aspose.asposecloudpdf.model.HorizontalAlignment;
 import com.aspose.asposecloudpdf.model.PopupAnnotation;
 import com.aspose.asposecloudpdf.model.PopupAnnotationsResponse;
-import com.aspose.asposecloudpdf.model.RectanglePdf;
+import com.aspose.asposecloudpdf.model.Rectangle;
 
 public class PutPopupAnnotationExample {
 
@@ -20,7 +20,7 @@ public class PutPopupAnnotationExample {
 
 		PdfApi pdfApi = new PdfApi("XXXXXXXXXXX", "XXXXXXX");
 		Common.uploadFile(pdfApi, name);
-		RectanglePdf rect = new RectanglePdf()
+		Rectangle rect = new Rectangle()
                 .LLX(100.)
                 .LLY(100.)
                 .URX(200.)
@@ -32,7 +32,7 @@ public class PutPopupAnnotationExample {
 
         PopupAnnotation annotation = new PopupAnnotation();
         annotation.setName("Name Updated");
-        annotation.setRect(rect);
+        annotation.rect(rect);
         annotation.setFlags(flags);
         annotation.setHorizontalAlignment(HorizontalAlignment.CENTER);
         annotation.setZindex(1);
