@@ -1,16 +1,15 @@
 ﻿
-# PdfPageStamp
-Represents Pdf stamps.
+# TextFooter
+Represents Pdf text header.
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**fileName** | **String** | Gets or sets the file name. | [optional]
-**pageIndex** | **Integer** | Gets or sets the index of the page. | [optional]
-**verticalAlignment** | [**VerticalAlignment**](VerticalAlignment.md) | Gets or sets vertical alignment of stamp on page. | [optional]
+**textAlignment** | [**HorizontalAlignment**](HorizontalAlignment.md) | Alignment of the text inside the stamp. | [optional]
+**value** | **String** | Gets or sets string value which is used as stamp on the page. | [optional]
+**textState** | [**TextState**](TextState.md) | Gets text properties of the stamp. See for details. | [optional]
 **bottomMargin** | **Double** | Gets or sets bottom margin of stamp. | [optional]
 **leftMargin** | **Double** | Gets or sets left margin of stamp. | [optional]
-**topMargin** | **Double** | Gets or sets top margin of stamp. | [optional]
 **rightMargin** | **Double** | Gets or sets right margin of stamp. | [optional]
 **background** | **Boolean** | Sets or gets a bool value that indicates the content is stamped as background. If the value is true, the stamp content is layed at the bottom. By defalt, the value is false, the stamp content is layed at the top. | [optional]
 **horizontalAlignment** | [**HorizontalAlignment**](HorizontalAlignment.md) | Gets or sets Horizontal alignment of stamp on the page.  | [optional]

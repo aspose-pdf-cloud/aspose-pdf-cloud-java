@@ -1,12 +1,12 @@
 ﻿
-# PdfPageStamp
+# PageNumberStamp
 Represents Pdf stamps.
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**fileName** | **String** | Gets or sets the file name. | [optional]
-**pageIndex** | **Integer** | Gets or sets the index of the page. | [optional]
+**value** | **String** | Gets or sets string value which is used as stamp on the page. | [optional]
+**startingNumber** | **Integer** | Gets or sets value of the number of starting page. Other pages will be numbered starting from this value. | [optional]
 **verticalAlignment** | [**VerticalAlignment**](VerticalAlignment.md) | Gets or sets vertical alignment of stamp on page. | [optional]
 **bottomMargin** | **Double** | Gets or sets bottom margin of stamp. | [optional]
 **leftMargin** | **Double** | Gets or sets left margin of stamp. | [optional]

@@ -1,14 +1,13 @@
 ﻿
-# PdfPageStamp
-Represents Pdf stamps.
+# ImageHeader
+Represents Pdf image header.
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **fileName** | **String** | Gets or sets the file name. | [optional]
-**pageIndex** | **Integer** | Gets or sets the index of the page. | [optional]
-**verticalAlignment** | [**VerticalAlignment**](VerticalAlignment.md) | Gets or sets vertical alignment of stamp on page. | [optional]
-**bottomMargin** | **Double** | Gets or sets bottom margin of stamp. | [optional]
+**width** | **Double** | Gets or sets image width. Setting this property allos to scal image horizontally. | [optional]
+**height** | **Double** | Gets or sets image height. Setting this image allows to scale image vertically. | [optional]
 **leftMargin** | **Double** | Gets or sets left margin of stamp. | [optional]
 **topMargin** | **Double** | Gets or sets top margin of stamp. | [optional]
 **rightMargin** | **Double** | Gets or sets right margin of stamp. | [optional]

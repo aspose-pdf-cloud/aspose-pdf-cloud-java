@@ -1,14 +1,13 @@
 ﻿
-# PdfPageStamp
-Represents Pdf stamps.
+# TextHeader
+Represents Pdf text header.
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**fileName** | **String** | Gets or sets the file name. | [optional]
-**pageIndex** | **Integer** | Gets or sets the index of the page. | [optional]
-**verticalAlignment** | [**VerticalAlignment**](VerticalAlignment.md) | Gets or sets vertical alignment of stamp on page. | [optional]
-**bottomMargin** | **Double** | Gets or sets bottom margin of stamp. | [optional]
+**textAlignment** | [**HorizontalAlignment**](HorizontalAlignment.md) | Alignment of the text inside the stamp. | [optional]
+**value** | **String** | Gets or sets string value which is used as stamp on the page. | [optional]
+**textState** | [**TextState**](TextState.md) | Gets text properties of the stamp. See for details. | [optional]
 **leftMargin** | **Double** | Gets or sets left margin of stamp. | [optional]
 **topMargin** | **Double** | Gets or sets top margin of stamp. | [optional]
 **rightMargin** | **Double** | Gets or sets right margin of stamp. | [optional]
