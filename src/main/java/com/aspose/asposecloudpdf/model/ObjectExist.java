@@ -31,118 +31,53 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.threeten.bp.OffsetDateTime;
 
 /**
- * Represents file DTO.
+ * Object exists
  */
-@ApiModel(description = "Represents file DTO.")
+@ApiModel(description = "Object exists")
 
-
-public class File {
-  @SerializedName("Name")
-  private String name = null;
+public class ObjectExist {
+  @SerializedName("Exists")
+  private Boolean exists = null;
 
   @SerializedName("IsFolder")
   private Boolean isFolder = null;
 
-  @SerializedName("ModifiedDate")
-  private OffsetDateTime modifiedDate = null;
-
-  @SerializedName("Size")
-  private Long size = null;
-
-  @SerializedName("Path")
-  private String path = null;
-
-  public File name(String name) {
-    this.name = name;
+  public ObjectExist exists(Boolean exists) {
+    this.exists = exists;
     return this;
   }
 
    /**
-   * Get name
-   * @return name
+   * Indicates that the file or folder exists.
+   * @return exists
   **/
-  @ApiModelProperty(value = "")
-  public String getName() {
-    return name;
+  @ApiModelProperty(required = true, value = "Indicates that the file or folder exists.")
+  public Boolean isExists() {
+    return exists;
   }
 
-  public void setName(String name) {
-    this.name = name;
+  public void setExists(Boolean exists) {
+    this.exists = exists;
   }
 
-  public File isFolder(Boolean isFolder) {
+  public ObjectExist isFolder(Boolean isFolder) {
     this.isFolder = isFolder;
     return this;
   }
 
    /**
-   * Get isFolder
+   * True if it is a folder, false if it is a file.
    * @return isFolder
   **/
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(required = true, value = "True if it is a folder, false if it is a file.")
   public Boolean isIsFolder() {
     return isFolder;
   }
 
   public void setIsFolder(Boolean isFolder) {
     this.isFolder = isFolder;
-  }
-
-  public File modifiedDate(OffsetDateTime modifiedDate) {
-    this.modifiedDate = modifiedDate;
-    return this;
-  }
-
-   /**
-   * Get modifiedDate
-   * @return modifiedDate
-  **/
-  @ApiModelProperty(value = "")
-  public OffsetDateTime getModifiedDate() {
-    return modifiedDate;
-  }
-
-  public void setModifiedDate(OffsetDateTime modifiedDate) {
-    this.modifiedDate = modifiedDate;
-  }
-
-  public File size(Long size) {
-    this.size = size;
-    return this;
-  }
-
-   /**
-   * Get size
-   * @return size
-  **/
-  @ApiModelProperty(required = true, value = "")
-  public Long getSize() {
-    return size;
-  }
-
-  public void setSize(Long size) {
-    this.size = size;
-  }
-
-  public File path(String path) {
-    this.path = path;
-    return this;
-  }
-
-   /**
-   * Get path
-   * @return path
-  **/
-  @ApiModelProperty(value = "")
-  public String getPath() {
-    return path;
-  }
-
-  public void setPath(String path) {
-    this.path = path;
   }
 
 
@@ -154,30 +89,24 @@ public class File {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    File file = (File) o;
-    return Objects.equals(this.name, file.name) &&
-        Objects.equals(this.isFolder, file.isFolder) &&
-        Objects.equals(this.modifiedDate, file.modifiedDate) &&
-        Objects.equals(this.size, file.size) &&
-        Objects.equals(this.path, file.path);
+    ObjectExist objectExist = (ObjectExist) o;
+    return Objects.equals(this.exists, objectExist.exists) &&
+        Objects.equals(this.isFolder, objectExist.isFolder);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, isFolder, modifiedDate, size, path);
+    return Objects.hash(exists, isFolder);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class File {\n");
+    sb.append("class ObjectExist {\n");
     
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    exists: ").append(toIndentedString(exists)).append("\n");
     sb.append("    isFolder: ").append(toIndentedString(isFolder)).append("\n");
-    sb.append("    modifiedDate: ").append(toIndentedString(modifiedDate)).append("\n");
-    sb.append("    size: ").append(toIndentedString(size)).append("\n");
-    sb.append("    path: ").append(toIndentedString(path)).append("\n");
     sb.append("}");
     return sb.toString();
   }

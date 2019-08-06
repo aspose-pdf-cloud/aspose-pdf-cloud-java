@@ -23,7 +23,7 @@
 package com.aspose.asposecloudpdf.model;
 
 import java.util.Objects;
-import com.aspose.asposecloudpdf.model.AsposeResponse;
+import com.aspose.asposecloudpdf.model.Error;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -32,31 +32,71 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
- * StorageExistResponse
+ * File upload result
  */
+@ApiModel(description = "File upload result")
 
-public class StorageExistResponse extends AsposeResponse {
-  @SerializedName("IsExist")
-  private Boolean isExist = null;
+public class FilesUploadResult {
+  @SerializedName("Uploaded")
+  private List<String> uploaded = null;
 
-  public StorageExistResponse isExist(Boolean isExist) {
-    this.isExist = isExist;
+  @SerializedName("Errors")
+  private List<Error> errors = null;
+
+  public FilesUploadResult uploaded(List<String> uploaded) {
+    this.uploaded = uploaded;
+    return this;
+  }
+
+  public FilesUploadResult addUploadedItem(String uploadedItem) {
+    if (this.uploaded == null) {
+      this.uploaded = new ArrayList<String>();
+    }
+    this.uploaded.add(uploadedItem);
     return this;
   }
 
    /**
-   * Get isExist
-   * @return isExist
+   * List of uploaded file names
+   * @return uploaded
   **/
-  @ApiModelProperty(value = "")
-  public Boolean isIsExist() {
-    return isExist;
+  @ApiModelProperty(value = "List of uploaded file names")
+  public List<String> getUploaded() {
+    return uploaded;
   }
 
-  public void setIsExist(Boolean isExist) {
-    this.isExist = isExist;
+  public void setUploaded(List<String> uploaded) {
+    this.uploaded = uploaded;
+  }
+
+  public FilesUploadResult errors(List<Error> errors) {
+    this.errors = errors;
+    return this;
+  }
+
+  public FilesUploadResult addErrorsItem(Error errorsItem) {
+    if (this.errors == null) {
+      this.errors = new ArrayList<Error>();
+    }
+    this.errors.add(errorsItem);
+    return this;
+  }
+
+   /**
+   * List of errors.
+   * @return errors
+  **/
+  @ApiModelProperty(value = "List of errors.")
+  public List<Error> getErrors() {
+    return errors;
+  }
+
+  public void setErrors(List<Error> errors) {
+    this.errors = errors;
   }
 
 
@@ -68,23 +108,24 @@ public class StorageExistResponse extends AsposeResponse {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    StorageExistResponse storageExistResponse = (StorageExistResponse) o;
-    return Objects.equals(this.isExist, storageExistResponse.isExist) &&
-        super.equals(o);
+    FilesUploadResult filesUploadResult = (FilesUploadResult) o;
+    return Objects.equals(this.uploaded, filesUploadResult.uploaded) &&
+        Objects.equals(this.errors, filesUploadResult.errors);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(isExist, super.hashCode());
+    return Objects.hash(uploaded, errors);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class StorageExistResponse {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    isExist: ").append(toIndentedString(isExist)).append("\n");
+    sb.append("class FilesUploadResult {\n");
+    
+    sb.append("    uploaded: ").append(toIndentedString(uploaded)).append("\n");
+    sb.append("    errors: ").append(toIndentedString(errors)).append("\n");
     sb.append("}");
     return sb.toString();
   }

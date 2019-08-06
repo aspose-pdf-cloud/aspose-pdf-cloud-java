@@ -31,74 +31,54 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import org.threeten.bp.OffsetDateTime;
 
 /**
- * Class for appendDocument service request building.
+ * The error details
  */
-@ApiModel(description = "Class for appendDocument service request building.")
+@ApiModel(description = "The error details")
 
-public class AppendDocument {
-  @SerializedName("Document")
-  private String document = null;
+public class ErrorDetails {
+  @SerializedName("RequestId")
+  private String requestId = null;
 
-  @SerializedName("StartPage")
-  private Integer startPage = null;
+  @SerializedName("Date")
+  private OffsetDateTime date = null;
 
-  @SerializedName("EndPage")
-  private Integer endPage = null;
-
-  public AppendDocument document(String document) {
-    this.document = document;
+  public ErrorDetails requestId(String requestId) {
+    this.requestId = requestId;
     return this;
   }
 
    /**
-   * Document to append (server path).
-   * @return document
+   * The request id
+   * @return requestId
   **/
-  @ApiModelProperty(required = true, value = "Document to append (server path).")
-  public String getDocument() {
-    return document;
+  @ApiModelProperty(value = "The request id")
+  public String getRequestId() {
+    return requestId;
   }
 
-  public void setDocument(String document) {
-    this.document = document;
+  public void setRequestId(String requestId) {
+    this.requestId = requestId;
   }
 
-  public AppendDocument startPage(Integer startPage) {
-    this.startPage = startPage;
+  public ErrorDetails date(OffsetDateTime date) {
+    this.date = date;
     return this;
   }
 
    /**
-   * Appending start page.
-   * @return startPage
+   * Date
+   * @return date
   **/
-  @ApiModelProperty(required = true, value = "Appending start page.")
-  public Integer getStartPage() {
-    return startPage;
+  @ApiModelProperty(required = true, value = "Date")
+  public OffsetDateTime getDate() {
+    return date;
   }
 
-  public void setStartPage(Integer startPage) {
-    this.startPage = startPage;
-  }
-
-  public AppendDocument endPage(Integer endPage) {
-    this.endPage = endPage;
-    return this;
-  }
-
-   /**
-   * Appending end page.
-   * @return endPage
-  **/
-  @ApiModelProperty(required = true, value = "Appending end page.")
-  public Integer getEndPage() {
-    return endPage;
-  }
-
-  public void setEndPage(Integer endPage) {
-    this.endPage = endPage;
+  public void setDate(OffsetDateTime date) {
+    this.date = date;
   }
 
 
@@ -110,26 +90,24 @@ public class AppendDocument {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    AppendDocument appendDocument = (AppendDocument) o;
-    return Objects.equals(this.document, appendDocument.document) &&
-        Objects.equals(this.startPage, appendDocument.startPage) &&
-        Objects.equals(this.endPage, appendDocument.endPage);
+    ErrorDetails errorDetails = (ErrorDetails) o;
+    return Objects.equals(this.requestId, errorDetails.requestId) &&
+        Objects.equals(this.date, errorDetails.date);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(document, startPage, endPage);
+    return Objects.hash(requestId, date);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class AppendDocument {\n");
+    sb.append("class ErrorDetails {\n");
     
-    sb.append("    document: ").append(toIndentedString(document)).append("\n");
-    sb.append("    startPage: ").append(toIndentedString(startPage)).append("\n");
-    sb.append("    endPage: ").append(toIndentedString(endPage)).append("\n");
+    sb.append("    requestId: ").append(toIndentedString(requestId)).append("\n");
+    sb.append("    date: ").append(toIndentedString(date)).append("\n");
     sb.append("}");
     return sb.toString();
   }
