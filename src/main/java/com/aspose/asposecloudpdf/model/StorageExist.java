@@ -23,8 +23,6 @@
 package com.aspose.asposecloudpdf.model;
 
 import java.util.Objects;
-import com.aspose.asposecloudpdf.model.AsposeResponse;
-import com.aspose.asposecloudpdf.model.DiscUsage;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -35,29 +33,30 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * DiscUsageResponse
+ * Storage exists
  */
+@ApiModel(description = "Storage exists")
 
-public class DiscUsageResponse extends AsposeResponse {
-  @SerializedName("DiscUsage")
-  private DiscUsage discUsage = null;
+public class StorageExist {
+  @SerializedName("Exists")
+  private Boolean exists = null;
 
-  public DiscUsageResponse discUsage(DiscUsage discUsage) {
-    this.discUsage = discUsage;
+  public StorageExist exists(Boolean exists) {
+    this.exists = exists;
     return this;
   }
 
    /**
-   * Get discUsage
-   * @return discUsage
+   * Shows that the storage exists.             
+   * @return exists
   **/
-  @ApiModelProperty(value = "")
-  public DiscUsage getDiscUsage() {
-    return discUsage;
+  @ApiModelProperty(required = true, value = "Shows that the storage exists.             ")
+  public Boolean isExists() {
+    return exists;
   }
 
-  public void setDiscUsage(DiscUsage discUsage) {
-    this.discUsage = discUsage;
+  public void setExists(Boolean exists) {
+    this.exists = exists;
   }
 
 
@@ -69,23 +68,22 @@ public class DiscUsageResponse extends AsposeResponse {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    DiscUsageResponse discUsageResponse = (DiscUsageResponse) o;
-    return Objects.equals(this.discUsage, discUsageResponse.discUsage) &&
-        super.equals(o);
+    StorageExist storageExist = (StorageExist) o;
+    return Objects.equals(this.exists, storageExist.exists);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(discUsage, super.hashCode());
+    return Objects.hash(exists);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class DiscUsageResponse {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    discUsage: ").append(toIndentedString(discUsage)).append("\n");
+    sb.append("class StorageExist {\n");
+    
+    sb.append("    exists: ").append(toIndentedString(exists)).append("\n");
     sb.append("}");
     return sb.toString();
   }

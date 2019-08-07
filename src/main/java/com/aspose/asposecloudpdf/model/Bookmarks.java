@@ -23,7 +23,9 @@
 package com.aspose.asposecloudpdf.model;
 
 import java.util.Objects;
-import com.aspose.asposecloudpdf.model.AsposeResponse;
+import com.aspose.asposecloudpdf.model.Bookmark;
+import com.aspose.asposecloudpdf.model.Link;
+import com.aspose.asposecloudpdf.model.LinkElement;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -36,37 +38,38 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * FilesResponse
+ * Represents list of bookmark.
  */
+@ApiModel(description = "Represents list of bookmark.")
 
-public class FilesResponse extends AsposeResponse {
-  @SerializedName("Files")
-  private List<File> files = null;
+public class Bookmarks extends LinkElement {
+  @SerializedName("List")
+  private List<Bookmark> list = null;
 
-  public FilesResponse files(List<File> files) {
-    this.files = files;
+  public Bookmarks list(List<Bookmark> list) {
+    this.list = list;
     return this;
   }
 
-  public FilesResponse addFilesItem(File filesItem) {
-    if (this.files == null) {
-      this.files = new ArrayList<File>();
+  public Bookmarks addListItem(Bookmark listItem) {
+    if (this.list == null) {
+      this.list = new ArrayList<Bookmark>();
     }
-    this.files.add(filesItem);
+    this.list.add(listItem);
     return this;
   }
 
    /**
-   * Get files
-   * @return files
+   * List of bookmarks.
+   * @return list
   **/
-  @ApiModelProperty(value = "")
-  public List<File> getFiles() {
-    return files;
+  @ApiModelProperty(value = "List of bookmarks.")
+  public List<Bookmark> getList() {
+    return list;
   }
 
-  public void setFiles(List<File> files) {
-    this.files = files;
+  public void setList(List<Bookmark> list) {
+    this.list = list;
   }
 
 
@@ -78,23 +81,23 @@ public class FilesResponse extends AsposeResponse {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    FilesResponse filesResponse = (FilesResponse) o;
-    return Objects.equals(this.files, filesResponse.files) &&
+    Bookmarks bookmarks = (Bookmarks) o;
+    return Objects.equals(this.list, bookmarks.list) &&
         super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(files, super.hashCode());
+    return Objects.hash(list, super.hashCode());
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class FilesResponse {\n");
+    sb.append("class Bookmarks {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    files: ").append(toIndentedString(files)).append("\n");
+    sb.append("    list: ").append(toIndentedString(list)).append("\n");
     sb.append("}");
     return sb.toString();
   }

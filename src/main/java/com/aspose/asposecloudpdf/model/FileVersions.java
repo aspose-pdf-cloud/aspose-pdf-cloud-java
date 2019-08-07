@@ -23,6 +23,7 @@
 package com.aspose.asposecloudpdf.model;
 
 import java.util.Objects;
+import com.aspose.asposecloudpdf.model.FileVersion;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -31,52 +32,42 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
- * FileExist
+ * File versions FileVersion.
  */
+@ApiModel(description = "File versions FileVersion.")
 
-public class FileExist {
-  @SerializedName("IsExist")
-  private Boolean isExist = null;
+public class FileVersions {
+  @SerializedName("Value")
+  private List<FileVersion> value = null;
 
-  @SerializedName("IsFolder")
-  private Boolean isFolder = null;
+  public FileVersions value(List<FileVersion> value) {
+    this.value = value;
+    return this;
+  }
 
-  public FileExist isExist(Boolean isExist) {
-    this.isExist = isExist;
+  public FileVersions addValueItem(FileVersion valueItem) {
+    if (this.value == null) {
+      this.value = new ArrayList<FileVersion>();
+    }
+    this.value.add(valueItem);
     return this;
   }
 
    /**
-   * Get isExist
-   * @return isExist
+   * File versions FileVersion.
+   * @return value
   **/
-  @ApiModelProperty(required = true, value = "")
-  public Boolean isIsExist() {
-    return isExist;
+  @ApiModelProperty(value = "File versions FileVersion.")
+  public List<FileVersion> getValue() {
+    return value;
   }
 
-  public void setIsExist(Boolean isExist) {
-    this.isExist = isExist;
-  }
-
-  public FileExist isFolder(Boolean isFolder) {
-    this.isFolder = isFolder;
-    return this;
-  }
-
-   /**
-   * Get isFolder
-   * @return isFolder
-  **/
-  @ApiModelProperty(required = true, value = "")
-  public Boolean isIsFolder() {
-    return isFolder;
-  }
-
-  public void setIsFolder(Boolean isFolder) {
-    this.isFolder = isFolder;
+  public void setValue(List<FileVersion> value) {
+    this.value = value;
   }
 
 
@@ -88,24 +79,22 @@ public class FileExist {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    FileExist fileExist = (FileExist) o;
-    return Objects.equals(this.isExist, fileExist.isExist) &&
-        Objects.equals(this.isFolder, fileExist.isFolder);
+    FileVersions fileVersions = (FileVersions) o;
+    return Objects.equals(this.value, fileVersions.value);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(isExist, isFolder);
+    return Objects.hash(value);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class FileExist {\n");
+    sb.append("class FileVersions {\n");
     
-    sb.append("    isExist: ").append(toIndentedString(isExist)).append("\n");
-    sb.append("    isFolder: ").append(toIndentedString(isFolder)).append("\n");
+    sb.append("    value: ").append(toIndentedString(value)).append("\n");
     sb.append("}");
     return sb.toString();
   }

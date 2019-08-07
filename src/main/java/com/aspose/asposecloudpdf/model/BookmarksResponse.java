@@ -24,7 +24,7 @@ package com.aspose.asposecloudpdf.model;
 
 import java.util.Objects;
 import com.aspose.asposecloudpdf.model.AsposeResponse;
-import com.aspose.asposecloudpdf.model.FileVersion;
+import com.aspose.asposecloudpdf.model.Bookmarks;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -33,41 +33,32 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
- * FileVersionsResponse
+ * Represents response containing multiple bookmarks info
  */
+@ApiModel(description = "Represents response containing multiple bookmarks info")
 
-public class FileVersionsResponse extends AsposeResponse {
-  @SerializedName("FileVersions")
-  private List<FileVersion> fileVersions = null;
+public class BookmarksResponse extends AsposeResponse {
+  @SerializedName("Bookmarks")
+  private Bookmarks bookmarks = null;
 
-  public FileVersionsResponse fileVersions(List<FileVersion> fileVersions) {
-    this.fileVersions = fileVersions;
-    return this;
-  }
-
-  public FileVersionsResponse addFileVersionsItem(FileVersion fileVersionsItem) {
-    if (this.fileVersions == null) {
-      this.fileVersions = new ArrayList<FileVersion>();
-    }
-    this.fileVersions.add(fileVersionsItem);
+  public BookmarksResponse bookmarks(Bookmarks bookmarks) {
+    this.bookmarks = bookmarks;
     return this;
   }
 
    /**
-   * Get fileVersions
-   * @return fileVersions
+   * Bookmarks object
+   * @return bookmarks
   **/
-  @ApiModelProperty(value = "")
-  public List<FileVersion> getFileVersions() {
-    return fileVersions;
+  @ApiModelProperty(value = "Bookmarks object")
+  public Bookmarks getBookmarks() {
+    return bookmarks;
   }
 
-  public void setFileVersions(List<FileVersion> fileVersions) {
-    this.fileVersions = fileVersions;
+  public void setBookmarks(Bookmarks bookmarks) {
+    this.bookmarks = bookmarks;
   }
 
 
@@ -79,23 +70,23 @@ public class FileVersionsResponse extends AsposeResponse {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    FileVersionsResponse fileVersionsResponse = (FileVersionsResponse) o;
-    return Objects.equals(this.fileVersions, fileVersionsResponse.fileVersions) &&
+    BookmarksResponse bookmarksResponse = (BookmarksResponse) o;
+    return Objects.equals(this.bookmarks, bookmarksResponse.bookmarks) &&
         super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(fileVersions, super.hashCode());
+    return Objects.hash(bookmarks, super.hashCode());
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class FileVersionsResponse {\n");
+    sb.append("class BookmarksResponse {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    fileVersions: ").append(toIndentedString(fileVersions)).append("\n");
+    sb.append("    bookmarks: ").append(toIndentedString(bookmarks)).append("\n");
     sb.append("}");
     return sb.toString();
   }
