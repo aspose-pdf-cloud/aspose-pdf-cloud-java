@@ -457,7 +457,7 @@ public class ConvertTests {
         th.uploadFile(name);
 
         String folder = th.tempFolder;
-        String resFileName = "result.zip";
+        String resFileName = "result_html.zip";
 
         AsposeResponse response = th.pdfApi.putPdfInStorageToHtml(
                 name,
