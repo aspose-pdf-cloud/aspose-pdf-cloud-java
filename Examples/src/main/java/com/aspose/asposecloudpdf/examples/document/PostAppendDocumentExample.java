@@ -19,8 +19,7 @@ public class PostAppendDocumentExample {
 		int startPage = 2;
 		int endPage = 4;
 
-		DocumentResponse response = pdfApi.postAppendDocument(name, null, "" + '/' + appendFileName,
-				startPage, endPage, null,"");
+		DocumentResponse response = pdfApi.postAppendDocument(name, null, startPage, endPage, null,"");
 		
 		System.out.println(response.getCode());
 

@@ -7,7 +7,12 @@ import java.util.List;
 import com.aspose.asposecloudpdf.ApiException;
 import com.aspose.asposecloudpdf.api.PdfApi;
 import com.aspose.asposecloudpdf.examples.Common;
-import com.aspose.asposecloudpdf.model.*;
+import com.aspose.asposecloudpdf.model.AnnotationFlags;
+import com.aspose.asposecloudpdf.model.AsposeResponse;
+import com.aspose.asposecloudpdf.model.HorizontalAlignment;
+import com.aspose.asposecloudpdf.model.LineAnnotation;
+import com.aspose.asposecloudpdf.model.Point;
+import com.aspose.asposecloudpdf.model.Rectangle;
 
 public class PostPageLineAnnotationsExample {
 

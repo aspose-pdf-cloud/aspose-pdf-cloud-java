@@ -13,7 +13,6 @@ import com.aspose.asposecloudpdf.model.HorizontalAlignment;
 import com.aspose.asposecloudpdf.model.InkAnnotation;
 import com.aspose.asposecloudpdf.model.Point;
 import com.aspose.asposecloudpdf.model.Rectangle;
-import com.aspose.asposecloudpdf.model.RectanglePdf;
 
 public class PostPageInkAnnotationExample {
 
