@@ -531,6 +531,22 @@ public class ApiClient {
             return str;
         }
     }
+    
+    /**
+     * Escape the given string to be used as URL segment value.
+     *
+     * @param str String to be escaped
+     * @return Escaped string
+     */
+    public String escapePathSegmentString(String str) {
+        try {
+            return URLEncoder.encode(str, "utf8")
+                .replaceAll("\\+", "%20")
+                .replaceAll("%2F", "/");
+        } catch (UnsupportedEncodingException e) {
+            return str;
+        }
+    }
 
     /**
      * Deserialize response body to Java object, according to the return type and
