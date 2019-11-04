@@ -531,7 +531,7 @@ public class ApiClient {
             return str;
         }
     }
-    
+
     /**
      * Escape the given string to be used as URL segment value.
      *
