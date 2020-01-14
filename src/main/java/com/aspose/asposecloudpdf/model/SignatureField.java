@@ -1,6 +1,6 @@
 /**
  *
- *   Copyright (c) 2019 Aspose.PDF Cloud
+ *   Copyright (c) 2020 Aspose.PDF Cloud
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
@@ -24,6 +24,7 @@ package com.aspose.asposecloudpdf.model;
 
 import java.util.Objects;
 import com.aspose.asposecloudpdf.model.AnnotationFlags;
+import com.aspose.asposecloudpdf.model.Border;
 import com.aspose.asposecloudpdf.model.Color;
 import com.aspose.asposecloudpdf.model.FormField;
 import com.aspose.asposecloudpdf.model.HorizontalAlignment;
