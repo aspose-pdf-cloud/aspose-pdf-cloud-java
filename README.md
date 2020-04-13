@@ -1,6 +1,6 @@
 ﻿# Aspose.PDF Cloud
 - API version: 3.0
-- Package version: 20.2.0
+- Package version: 20.4.0
 
 [Aspose.PDF Cloud](https://products.aspose.cloud/pdf) is a true REST API that enables you to perform a wide range of document processing operations including creation, manipulation, conversion and rendering of PDF documents in the cloud.
 
@@ -38,7 +38,7 @@ Add this dependency to your project's POM:
 <dependency>
     <groupId>com.aspose</groupId>
     <artifactId>aspose-cloud-pdf</artifactId>
-    <version>20.2.0</version>
+    <version>20.4.0</version>
     <scope>compile</scope>
 </dependency>
 ```
@@ -48,7 +48,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.aspose:aspose-cloud-pdf:20.2.0"
+compile "com.aspose:aspose-cloud-pdf:20.4.0"
 ```
 
 ### Others
@@ -59,7 +59,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/aspose-cloud-pdf-20.2.0.jar
+* target/aspose-cloud-pdf-20.4.0.jar
 * target/lib/*.jar
 
 ## Getting Started
@@ -523,6 +523,7 @@ Class | Method | HTTP request | Description
  - [HorizontalAlignment](docs/HorizontalAlignment.md)
  - [HtmlDocumentType](docs/HtmlDocumentType.md)
  - [HtmlMarkupGenerationModes](docs/HtmlMarkupGenerationModes.md)
+ - [ImageFragment](docs/ImageFragment.md)
  - [ImageSrcType](docs/ImageSrcType.md)
  - [ImageTemplate](docs/ImageTemplate.md)
  - [ImageTemplatesRequest](docs/ImageTemplatesRequest.md)
