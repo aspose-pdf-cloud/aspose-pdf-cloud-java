@@ -3,10 +3,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.aspose</groupId>
-    <artifactId>aspose-cloud-pdf</artifactId>
+    <artifactId>aspose-pdf-cloud</artifactId>
     <packaging>jar</packaging>
-    <name>aspose-cloud-pdf</name>
-    <version>20.5.0</version>
+    <name>aspose-pdf-cloud</name>
+    <version>20.6.0</version>
     <url>https://www.aspose.cloud/</url>
     <description>Java library for communicating with the Aspose.Pdf for Cloud API</description>
     
