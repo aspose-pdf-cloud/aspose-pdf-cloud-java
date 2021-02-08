@@ -1,0 +1,23 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.aspose.asposecloudpdf.api</groupId>
+	<artifactId>examples</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+<repositories>
+		<repository>
+			<id>aspose</id>
+			<url>https://artifact.aspose.cloud/repo/</url>
+		</repository>
+	</repositories>
+<dependencies>
+<!-- https://mvnrepository.com/artifact/com.aspose/aspose-cloud-pdf -->
+<dependency>
+    <groupId>com.aspose</groupId>
+    <artifactId>aspose-cloud-pdf</artifactId>
+    <version>19.8.0</version>
+</dependency>
+
+</dependencies>	
+</project>
