@@ -67,7 +67,7 @@ Add this dependency to your project's POM:
 <dependency>
     <groupId>com.aspose</groupId>
     <artifactId>aspose-cloud-pdf</artifactId>
-    <version>20.12.0</version>
+    <version>21.1.0</version>
     <scope>compile</scope>
 </dependency>
 ```
@@ -77,7 +77,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.aspose:aspose-cloud-pdf:20.12.0"
+compile "com.aspose:aspose-cloud-pdf:21.1.0"
 ```
 
 ### Others
@@ -88,7 +88,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/aspose-cloud-pdf-20.12.0.jar
+* target/aspose-cloud-pdf-21.1.0.jar
 * target/lib/*.jar
 
 ## Getting Started
