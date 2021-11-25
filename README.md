@@ -1,4 +1,4 @@
-﻿![](https://img.shields.io/badge/api-v3.0-lightgrey)  [![GitHub license](https://img.shields.io/github/license/aspose-pdf-cloud/aspose-pdf-cloud-java)](https://github.com/aspose-pdf-cloud/aspose-pdf-cloud-java)
+![](https://img.shields.io/badge/api-v3.0-lightgrey) ![GitHub release (latest by date)](https://img.shields.io/github/v/release/aspose-pdf-cloud/aspose-pdf-cloud-java) [![GitHub license](https://img.shields.io/github/license/aspose-pdf-cloud/aspose-pdf-cloud-java)](https://github.com/aspose-pdf-cloud/aspose-pdf-cloud-java)
 
 # Java REST API to Process PDF in Cloud
 [Aspose.PDF Cloud](https://products.aspose.cloud/pdf) is a true REST API that enables you to perform a wide range of document processing operations including creation, manipulation, conversion and rendering of PDF documents in the cloud.
@@ -89,35 +89,20 @@ Then manually install the following JARs:
 
 Please follow the [installation](#installation) instruction and execute the following Java code:
 
+## Delete Field from PDF in Java
+
 ```java
+	// Get your ClientId and ClientSecret from https://dashboard.aspose.cloud (free registration required).
+	PdfApi pdfApi = new PdfApi("MY_CLIENT_SECRET", "MY_CLIENT_ID");
 
-import com.aspose.asposecloudpdf.*;
-import com.aspose.asposecloudpdf.model.*;
-import com.aspose.asposecloudpdf.api.PdfApi;
+	String name = "name_example"; // String | The document name.
+	String fieldName = "fieldName_example"; // String | The field name/
+	String storage = "storage_example"; // String | The document storage.
+	String folder = "folder_example"; // String | The document folder.
 
-import java.io.File;
-import java.util.*;
-
-public class PdfApiExample {
-
-    public static void main(String[] args) {
-        // Get App key and App SID from https://cloud.aspose.com
-        PdfApi apiInstance = new PdfApi("app_key", "app_sid");
-        String name = "name_example"; // String | The document name.
-        String fieldName = "fieldName_example"; // String | The field name/
-        String storage = "storage_example"; // String | The document storage.
-        String folder = "folder_example"; // String | The document folder.
-        try {
-            SaaSposeResponse result = apiInstance.deleteField(name, fieldName, storage, folder);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling PdfApi#deleteField");
-            e.printStackTrace();
-        }
-    }
-}
-
+	com.squareup.okhttp.Call result = pdfApi.deleteField(name, fieldName, storage, folder);
 ```
+
 
 ## Unit Tests
 Aspose PDF Cloud SDK includes a suite of unit tests within the "test" subdirectory. These Unit Tests also serves as examples of how to use the Aspose PDF Cloud SDK.
@@ -773,5 +758,4 @@ Class | Method | HTTP request | Description
  - [PolyLineAnnotation](docs/PolyLineAnnotation.md)
  - [PolygonAnnotation](docs/PolygonAnnotation.md)
  - [SquareAnnotation](docs/SquareAnnotation.md)
-
 
