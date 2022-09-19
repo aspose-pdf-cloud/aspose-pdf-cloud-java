@@ -92,7 +92,7 @@ public class ApiClient {
         
         // Add custom headers
         addDefaultHeader("x-aspose-client", "java sdk");
-        addDefaultHeader("x-aspose-client-version", "22.8.0");
+        addDefaultHeader("x-aspose-client-version", "22.9.0");
         
         // PDFCLOUD-418 Set default Connect Timeout
         setConnectTimeout(5 * 60 * 1000);
@@ -1030,9 +1030,9 @@ public class ApiClient {
                     .addEncoded("client_secret", getAppKey())
                     .build();
 
-            String url = basePath.replace("/v3.0", "") + "/connect/token";
+            String tokenUrl = basePath.replace("/v3.0", "") + "/connect/token";
             Request request = new Request.Builder()
-                    .url(url)
+                    .url(tokenUrl)
                     .post(requestBody)
                     .addHeader("Content-Type", "application/x-www-form-urlencoded")
                     .build();
