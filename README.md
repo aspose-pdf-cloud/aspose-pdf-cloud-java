@@ -30,15 +30,8 @@ XLS, XLSX, PPTX, DOC, DOCX, MobiXML, JPEG, EMF, PNG, BMP, GIF, TIFF, Text
 ## Read PDF Formats
 MHT, PCL, PS, XSLFO, MD
 
-## Enhancements in Version 22.10
-- Convert password protected PDF to DOC.
-- Support to convert password protected document to graphic formats.
-- Support to convert pages of password protected PDF to JPEG using GetPageConvertToJpeg.
-- Add new REST API endpoint to parse PDF document into PDF parts containing specified page ranges.
+## Enhancements in Version 22.11
 - A new version of Aspose.PDF Cloud was prepared using the latest version of Aspose.PDF for .NET.
-
-## Bugs fixed in Version 22.10
-- The PostSplitDocument API method is throwing 504 Gateway Error.
 
 ## Installation
 To install the API client library to your local Maven repository, simply execute:
@@ -62,7 +55,7 @@ Add this dependency to your project's POM:
 <dependency>
     <groupId>com.aspose</groupId>
     <artifactId>aspose-cloud-pdf</artifactId>
-    <version>22.10.0</version>
+    <version>22.11.0</version>
     <scope>compile</scope>
 </dependency>
 ```
@@ -71,7 +64,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.aspose:aspose-cloud-pdf:22.10.0"
+compile "com.aspose:aspose-cloud-pdf:22.11.0"
 ```
 
 ### Others
@@ -82,7 +75,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/aspose-cloud-pdf-22.10.0.jar
+* target/aspose-cloud-pdf-22.11.0.jar
 * target/lib/*.jar
 
 ## Getting Started
@@ -372,7 +365,7 @@ Class | Method | HTTP request | Description
 *PdfApi* | [**postSignPage**](docs/PdfApi.md#postSignPage) | **POST** /pdf/\{name}/pages/\{pageNumber}/sign | Sign page.
 *PdfApi* | [**postSignatureField**](docs/PdfApi.md#postSignatureField) | **POST** /pdf/\{name}/fields/signature | Add document signature field.
 *PdfApi* | [**postSplitDocument**](docs/PdfApi.md#postSplitDocument) | **POST** /pdf/\{name}/split | Split document to parts.
-*PdfApi* | [**postSplitRangePdfDocument**](docs/PdfApi.md#postSplitRangePdfDocument) | **POST** /pdf/\{name}/splitrangepdf | 
+*PdfApi* | [**postSplitRangePdfDocument**](docs/PdfApi.md#postSplitRangePdfDocument) | **POST** /pdf/\{name}/splitrangepdf | Split document into ranges.
 *PdfApi* | [**postTextBoxFields**](docs/PdfApi.md#postTextBoxFields) | **POST** /pdf/\{name}/fields/textbox | Add document text box fields.
 *PdfApi* | [**putAddNewPage**](docs/PdfApi.md#putAddNewPage) | **PUT** /pdf/\{name}/pages | Add new page to end of the document.
 *PdfApi* | [**putAddText**](docs/PdfApi.md#putAddText) | **PUT** /pdf/\{name}/pages/\{pageNumber}/text | Add text to PDF document page.
