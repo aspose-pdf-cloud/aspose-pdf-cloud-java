@@ -30,7 +30,7 @@ XLS, XLSX, PPTX, DOC, DOCX, MobiXML, JPEG, EMF, PNG, BMP, GIF, TIFF, Text
 ## Read PDF Formats
 MHT, PCL, PS, XSLFO, MD
 
-## Enhancements in Version 23.2
+## Enhancements in Version 23.3
 - A new version of Aspose.PDF Cloud was prepared using the latest version of Aspose.PDF for .NET.
 
 ## Installation
@@ -55,7 +55,7 @@ Add this dependency to your project's POM:
 <dependency>
     <groupId>com.aspose</groupId>
     <artifactId>aspose-cloud-pdf</artifactId>
-    <version>23.2.0</version>
+    <version>23.3.0</version>
     <scope>compile</scope>
 </dependency>
 ```
@@ -64,7 +64,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.aspose:aspose-cloud-pdf:23.2.0"
+compile "com.aspose:aspose-cloud-pdf:23.3.0"
 ```
 
 ### Others
@@ -75,7 +75,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/aspose-cloud-pdf-23.2.0.jar
+* target/aspose-cloud-pdf-23.3.0.jar
 * target/lib/*.jar
 
 ## Getting Started
