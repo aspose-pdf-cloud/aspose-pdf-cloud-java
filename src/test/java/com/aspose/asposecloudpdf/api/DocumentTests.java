@@ -26,7 +26,6 @@ import com.aspose.asposecloudpdf.model.*;
 
 import org.junit.Test;
 
-
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -56,7 +55,6 @@ public class DocumentTests {
         DocumentResponse response = this.th.pdfApi.getDocument(name, null, folder);
         assertEquals(200, (int)response.getCode());
     }
-
 
     /**
      * PostOptimizeDocument Test
@@ -258,4 +256,50 @@ public class DocumentTests {
         DisplayPropertiesResponse response = th.pdfApi.putDocumentDisplayProperties(name, displayProperties, null, folder);
         assertEquals(200, (int)response.getCode());
     }
-}
+
+    /**
+     * PostOrganizeDocument Test
+     * @throws ApiException
+     *          if the Api call fails
+     */
+
+     @Test
+     public void postOrganizeDocumentTest() throws ApiException
+     {
+         String name = "4pages.pdf";
+         this.th.uploadFile(name);
+         String folder = TestHelper.tempFolder; 
+         AsposeResponse response = TestHelper.pdfApi.postOrganizeDocument(name, "1,4-2", TestHelper.tempFolder + '/' + name, null, folder);
+         assertEquals(200, (int)response.getCode());
+     }
+
+    /**
+     * PostOrganizeDocuments Test
+     * @throws ApiException
+     *          if the Api call fails
+     */
+
+     @Test
+     public void postOrganizeDocumentsTest() throws ApiException
+     {
+         String name1 = "4pages.pdf";
+         this.th.uploadFile(name1);
+         String name2 = "marketing.pdf";
+         this.th.uploadFile(name2);
+         OrganizeDocumentRequest request = new OrganizeDocumentRequest();
+         OrganizeDocumentData data1 = new OrganizeDocumentData();
+         data1.setPath(TestHelper.tempFolder + '/' + name1);
+         data1.setPages("4-2");
+         request.addListItem(data1);
+         OrganizeDocumentData data2 = new OrganizeDocumentData();
+         data2.setPath(TestHelper.tempFolder + '/' + name2);
+         data2.setPages("2");
+         request.addListItem(data2);
+         OrganizeDocumentData data3 = new OrganizeDocumentData();
+         data3.setPath(TestHelper.tempFolder + '/' + name1);
+         data3.setPages("3,1");
+         request.addListItem(data3);
+         AsposeResponse response = TestHelper.pdfApi.postOrganizeDocuments(request, TestHelper.tempFolder + "/OrganizeMany.pdf", null);
+         assertEquals(200, (int)response.getCode());
+     }
+ }
