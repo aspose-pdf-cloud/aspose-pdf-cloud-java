@@ -27,6 +27,7 @@ import com.aspose.asposecloudpdf.model.*;
 import org.junit.Test;
 
 import java.io.File;
+import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -104,7 +105,6 @@ public class ImagesTests {
         assertEquals(200, (int)response.getCode());
     }
 
-
     /**
      * PostReplaceImage Test
      * @throws ApiException
@@ -132,7 +132,27 @@ public class ImagesTests {
         assertEquals(200, (int)response.getCode());
     }
 
-
+    /**
+     * PutReplaceMultipleImage Test
+     * @throws ApiException
+     *          if the Api call fails
+     */
+     @Test
+     public void putReplaceMultipleImageTest() throws ApiException
+     {
+         String name = "PdfWithImages.pdf";
+         th.uploadFile(name); 
+         String imageFileName = "butterfly.jpg";
+         th.uploadFile(imageFileName); 
+         String folder = th.tempFolder;
+         String imageFile = folder + '/' + imageFileName; 
+         ArrayList<String> imageIds = new ArrayList<String>();
+         imageIds.add("GE5TENJVGQZTWMJYGQWDINRUFQ2DCMRMGY4TC");
+         imageIds.add("GE5TIMJSGY3TWMJXG4WDIMBZFQ2DCOJMGQ3DK");
+         ImagesResponse response = th.pdfApi.putReplaceMultipleImage(name, imageIds, imageFile, null, folder, null);
+         assertEquals(200, (int)response.getCode());
+     }
+ 
     /**
      * PostInsertImage Test
      * @throws ApiException

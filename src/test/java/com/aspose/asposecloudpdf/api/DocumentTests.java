@@ -120,7 +120,7 @@ public class DocumentTests {
         String name = "4pages.pdf";
         this.th.uploadFile(name);
         String folder = this.th.tempFolder;
-        SplitResultResponse response = this.th.pdfApi.postSplitDocument(name, null, null, null, null, folder);
+        SplitResultResponse response = this.th.pdfApi.postSplitDocument(name, null, null, null, null, folder, null);
         assertEquals(200, (int)response.getCode());
     }
 
@@ -147,7 +147,7 @@ public class DocumentTests {
         pageRange3.setTo(3);
         rangeOptions.addPageRangesItem(pageRange3);
         String folder = this.th.tempFolder;
-        SplitResultResponse response = this.th.pdfApi.postSplitRangePdfDocument(name, rangeOptions, null, folder);
+        SplitResultResponse response = this.th.pdfApi.postSplitRangePdfDocument(name, rangeOptions, null, folder, null);
         assertEquals(200, (int)response.getCode());
     }
 

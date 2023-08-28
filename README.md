@@ -30,12 +30,16 @@ XLS, XLSX, PPTX, DOC, DOCX, MobiXML, JPEG, EMF, PNG, BMP, GIF, TIFF, Text
 ## Read PDF Formats
 MHT, PCL, PS, XSLFO, MD
 
-## Enhancements in Version 23.7
-- Form Field MappingName property support.
+## Enhancements in Version 23.8
+- Support to split password protected PDF documents.
+- Support to convert password Protected PDF to Xlsx.
+- Support to convert password Protected PDF to Excel.
+- Replace a single image using multiple Image Ids.
 - A new version of Aspose.PDF Cloud was prepared using the latest version of Aspose.PDF for .NET.
 
-## Bugs fixed in Version 23.7
-- Adding Radio Button throws Internal Error.
+## Bugs fixed in Version 23.8
+- The putMergeDocuments API method in Node.js Throws Gateway Error.
+- Text Replacement Changes the Background.
 
 ## Installation
 To install the API client library to your local Maven repository, simply execute:
@@ -59,7 +63,7 @@ Add this dependency to your project's POM:
 <dependency>
     <groupId>com.aspose</groupId>
     <artifactId>aspose-cloud-pdf</artifactId>
-    <version>23.7.0</version>
+    <version>23.8.0</version>
     <scope>compile</scope>
 </dependency>
 ```
@@ -68,7 +72,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.aspose:aspose-cloud-pdf:23.7.0"
+compile "com.aspose:aspose-cloud-pdf:23.8.0"
 ```
 
 ### Others
@@ -78,7 +82,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/aspose-cloud-pdf-23.7.0.jar
+* target/aspose-cloud-pdf-23.8.0.jar
 * target/lib/*.jar
 
 ## Getting Started
