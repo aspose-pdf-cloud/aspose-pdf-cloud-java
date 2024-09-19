@@ -30,9 +30,10 @@ XLS, XLSX, PPTX, DOC, DOCX, MobiXML, JPEG, EMF, PNG, BMP, GIF, TIFF, Text
 ## Read PDF Formats
 MHT, PCL, PS, XSLFO, MD
 
-## Enhancements in Version 24.8
-- Adding Text stamps to multiple pages.
-- Adding Image stamps to multiple pages.
+## Enhancements in Version 24.9
+- Develop DeleteDocumentLayer Method.
+- Develop GetDocumentLayers Method.
+- How to extract PDF layer elements and create a new PDF
 - A new version of Aspose.PDF Cloud was prepared using the latest version of Aspose.PDF for .NET.
 
 ## Installation
@@ -57,7 +58,7 @@ Add this dependency to your project's POM:
 <dependency>
     <groupId>com.aspose</groupId>
     <artifactId>aspose-cloud-pdf</artifactId>
-    <version>24.8.0</version>
+    <version>24.9.0</version>
     <scope>compile</scope>
 </dependency>
 ```
@@ -66,7 +67,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.aspose:aspose-cloud-pdf:24.8.0"
+compile "com.aspose:aspose-cloud-pdf:24.9.0"
 ```
 
 ### Others
@@ -76,7 +77,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/aspose-cloud-pdf-24.8.0.jar
+* target/aspose-cloud-pdf-24.9.0.jar
 * target/lib/*.jar
 
 ## Getting Started
