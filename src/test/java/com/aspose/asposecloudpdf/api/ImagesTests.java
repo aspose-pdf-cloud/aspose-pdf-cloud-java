@@ -31,6 +31,7 @@ import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertThat;
 
 public class ImagesTests {
     private TestHelper th;
@@ -464,6 +465,24 @@ public class ImagesTests {
         File response = th.pdfApi.getImageExtractAsPng(name, imageId, null, null, null,
                 th.tempFolder);
         assertNotNull(response);
+    }
+
+    /**
+     * GetImageExtractAsSvg Test
+     * @throws ApiException
+     *          if the Api call fails
+     */
+
+     @Test
+    public void getImageExtractAsSvgTest() throws ApiException
+    {
+        final String name = "Alfa.pdf";
+        th.uploadFile(name);
+
+        int pageNumber = 1;
+
+        SvgImages response = th.pdfApi.getImagesExtractSvg(name, pageNumber, null, th.tempFolder, null);
+        assertEquals(200, (int)response.getCode());
     }
 }
 
