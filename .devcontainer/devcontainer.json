@@ -1,0 +1,17 @@
+{
+	"name": "Java",
+	"image": "mcr.microsoft.com/devcontainers/java:8",
+	"features": {
+		"ghcr.io/devcontainers/features/java:1.6.2": {
+			"version": "none",
+			"installMaven": "true",
+			"installGradle": "true",
+			"gradleVersion": "6.9.1"
+		}
+	},
+	"workspaceFolder": "/SDKs/Java",
+	"workspaceMount": "source=${localWorkspaceFolder},target=/SDKs/Java,type=bind,consistency=cached",
+	"mounts": [
+		"source=${localWorkspaceFolder}/../../Settings,target=/Settings,type=bind,consistency=cached"
+	]
+}
