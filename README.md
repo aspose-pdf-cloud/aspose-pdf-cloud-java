@@ -30,12 +30,9 @@ XLS, XLSX, PPTX, DOC, DOCX, MobiXML, JPEG, EMF, PNG, BMP, GIF, TIFF, Text
 ## Read PDF Formats
 MHT, PCL, PS, XSLFO, MD
 
-## Enhancements in Version 25.8
-- Implement document page resize functionality using the Pdf.Cloud API library.
+## Enhancements in Version 25.9
+- Implement PDF document page crop functionality using the Pdf.Cloud API library.
 - A new version of Aspose.PDF Cloud was prepared using the latest version of Aspose.PDF for .NET.
-
-## Bugs fixed in Version 25.8
-- Implement delete watermark from PDF document using the Pdf.Cloud API library.
 
 ## Installation
 To install the API client library to your local Maven repository, simply execute:
@@ -59,7 +56,7 @@ Add this dependency to your project's POM:
 <dependency>
     <groupId>com.aspose</groupId>
     <artifactId>aspose-cloud-pdf</artifactId>
-    <version>25.8.0</version>
+    <version>25.9.0</version>
     <scope>compile</scope>
 </dependency>
 ```
@@ -68,7 +65,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.aspose:aspose-cloud-pdf:25.8.0"
+compile "com.aspose:aspose-cloud-pdf:25.9.0"
 ```
 
 ### Others
@@ -78,7 +75,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/aspose-cloud-pdf-25.8.0.jar
+* target/aspose-cloud-pdf-25.9.0.jar
 * target/lib/*.jar
 
 ## Getting Started
