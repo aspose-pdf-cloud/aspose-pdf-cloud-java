@@ -75,8 +75,8 @@ public class ApiClient {
     private HttpLoggingInterceptor loggingInterceptor;
 
     private String accessToken;
-    private String appKey;
-    private String appSid;
+    private String clientSecret;
+    private String clientId;
 
     /*
      * Constructor for ApiClient
@@ -112,43 +112,43 @@ public class ApiClient {
     }
 
      /**
-     * Get App Key
+     * Get Client Secret
      *
-     * @return App Key
+     * @return Client Secret
      */
-    public String getAppKey() 
+    public String getClientSecret() 
     {
-        return appKey;
+        return clientSecret;
     }
     
     /**
-     * Set App Key
+     * Set Client Secret
      *
-     * @param appKey App Key
+     * @param clientSecret Client Secret
      */
-    public void setAppKey(String appKey) 
+    public void setClientSecret(String clientSecret) 
     {
-        this.appKey = appKey;
+        this.clientSecret = clientSecret;
     }
     
      /**
-     * Get App Sid
+     * Get Client Id
      *
-     * @return App Sid
+     * @return Client Id
      */
-    public String getAppSid() 
+    public String getClientId() 
     {
-        return appSid;
+        return clientId;
     }
     
     /**
-     * Set App Sid
+     * Set Client Id
      *
-     * @param appSid App Sid
+     * @param clientId Client Id
      */
-    public void setAppSid(String appSid) 
+    public void setClientId(String clientId) 
     {
-        this.appSid = appSid;
+        this.clientId = clientId;
     }
     
     
@@ -1040,8 +1040,8 @@ public class ApiClient {
         try {
             RequestBody requestBody = new FormEncodingBuilder()
                     .addEncoded("grant_type", "client_credentials")
-                    .addEncoded("client_id", getAppSid())
-                    .addEncoded("client_secret", getAppKey())
+                    .addEncoded("client_id", getClientId())
+                    .addEncoded("client_secret", getClientSecret())
                     .build();
 
             String tokenUrl = basePath.replace("/v3.0", "") + "/connect/token";
