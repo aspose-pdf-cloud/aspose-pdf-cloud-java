@@ -12,7 +12,6 @@
 	"workspaceFolder": "/SDKs/Java",
 	"workspaceMount": "source=${localWorkspaceFolder},target=/SDKs/Java,type=bind,consistency=cached",
 	"mounts": [
-		"source=${localWorkspaceFolder}/../../Settings,target=/Settings,type=bind,consistency=cached"
 	],
 	"customizations": {
 		"vscode": {
