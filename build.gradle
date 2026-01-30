@@ -20,7 +20,7 @@ apply plugin: 'idea'
 apply plugin: 'eclipse'
 
 group = 'com.aspose'
-version = 'ASPOSE_RELEASE_VERSION'
+version = '26.1.0'
 
 buildscript {
     repositories {
