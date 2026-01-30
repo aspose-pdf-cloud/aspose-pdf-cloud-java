@@ -94,7 +94,7 @@ public class ApiClient {
         
         // Add custom headers
         addDefaultHeader("x-aspose-client", "java sdk");
-        addDefaultHeader("x-aspose-client-version", "ASPOSE_RELEASE_VERSION");
+        addDefaultHeader("x-aspose-client-version", "26.1.0");
         
         // PDFCLOUD-418 Set default Connect Timeout
         setConnectTimeout(5 * 60 * 1000);
